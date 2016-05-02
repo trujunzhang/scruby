@@ -5,10 +5,6 @@ require 'ItunesGenerator'
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def contact
-
-  end
-
   def user_email
 
     @email= ""
@@ -82,18 +78,6 @@ class ApplicationController < ActionController::Base
       GooglePlaysGenerator.new("googleplays")
     elsif type == "itunes"
       ItunesGenerator.new("itunes")
-    end
-  end
-
-  def environment
-    respond_to do |format|
-      format.json do
-        render json: {
-            gmail_username: ENV["GMAIL_USERNAME"],
-            gmail_password: ENV["GMAIL_PASSWORD"],
-            SECRET_KEY_BASE: ENV["SECRET_KEY_BASE"]
-        }.to_json
-      end
     end
   end
 
