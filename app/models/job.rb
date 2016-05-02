@@ -2,6 +2,7 @@ class Job
   include Mongoid::Document
   field :guid, type: String
   field :title, type: String
+  field :jobtype, type: String
   field :url, type: String
   field :customer, type: String
   field :description, type: String
