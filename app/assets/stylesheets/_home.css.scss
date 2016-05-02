@@ -1,0 +1,21 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "sub-navigation";
+
+//common
+@import "home/course-page";
+
+@import "home/block";
+
+//sections
+@import "home/course-hero";
+@import "home/press-articles-container";
+@import "home/program-highlights";
+@import "home/learning";
+@import "home/functionality";
+@import "home/testimonials";
+@import "home/faq";
+@import "home/footer";

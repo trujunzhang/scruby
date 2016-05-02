@@ -1,0 +1,69 @@
+<%= form_for(@itune) do |f| %>
+  <% if @itune.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@itune.errors.count, "error") %> prohibited this itune from being saved:</h2>
+
+      <ul>
+      <% @itune.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :guid %><br />
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :updateAt %><br />
+    <%= f.text_field :updateAt %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail %><br />
+    <%= f.text_field :thumbnail %>
+  </div>
+  <div class="field">
+    <%= f.label :appLastUpdated %><br />
+    <%= f.text_field :appLastUpdated %>
+  </div>
+  <div class="field">
+    <%= f.label :developer %><br />
+    <%= f.text_field :developer %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :ofReviews %><br />
+    <%= f.text_field :ofReviews %>
+  </div>
+  <div class="field">
+    <%= f.label :ofReviewsCurrent %><br />
+    <%= f.text_field :ofReviewsCurrent %>
+  </div>
+  <div class="field">
+    <%= f.label :starts %><br />
+    <%= f.text_field :starts %>
+  </div>
+  <div class="field">
+    <%= f.label :startsCurrent %><br />
+    <%= f.text_field :startsCurrent %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

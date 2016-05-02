@@ -1,0 +1,59 @@
+
+.quote-box {
+  position: relative;
+  margin: 0 0 32px 24px;
+  padding: 0
+}
+
+.quote-box::before {
+  content: "“";
+  position: absolute;
+  top: -0.5em;
+  left: -0.35em;
+  color: black;
+  font-family: "Arial Black", "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 500%;
+  display: block;
+  opacity: 0.1
+}
+
+.quote-box .quote-box-body {
+  position: relative
+}
+
+.quote-box-white {
+  color: white
+}
+
+.quote-box-white::before {
+  color: white
+}
+
+@media (min-width: 992px) {
+
+  .course-page .mentor-quote .mentor-image-desktop {
+    display: block;
+    max-width: 50%;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+  }
+
+  .course-page .mentor-quote .mentor-image-desktop img {
+    display: block;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 50px;
+    margin-right: 180px;
+    margin-bottom: 40px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .mentor-image-desktop .hide-on-mobile{
+    display: none
+  }
+}

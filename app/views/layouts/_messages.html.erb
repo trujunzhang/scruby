@@ -1,0 +1,31 @@
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+<% end %>
+
+
+<div class="row">
+  <div class="container" id="email_panel">
+    <!--<div class="send_email_panel">-->
+    <!--<h1>INFORMATION</h1><label>EMAIL:</label><input class="form-control"id="signin_form_email"placeholder="Email"type="email"autocomplete="off" value="wanghao@gmail.com"><br><input id="send_email_btn" class="btn btn-orange" name="commit" type="submit" value="Send">-->
+    <!--</div>-->
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div id="messagePanel" class="row" >
+
+      <!--<div class="alert alert-success fade in">-->
+      <!--<button class="close" data-dismiss="alert">×</button>-->
+      <!--<strong>Well done!</strong> You successfully Expert to Excel to your email</a>.-->
+      <!--</div>-->
+
+      <!--<div class="alert alert-danger fade in">-->
+      <!--<button class="close" data-dismiss="alert">×</button>-->
+      <!--<strong>Oh snap!</strong> Expert to Excel failed</a>.-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

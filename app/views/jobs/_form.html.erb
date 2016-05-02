@@ -1,0 +1,55 @@
+<%= form_for(@job) do |f| %>
+    <% if @job.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+          <ul>
+            <% @job.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :url %><br/>
+      <%= f.text_field :url %>
+    </div>
+    <div class="field">
+      <%= f.label :customer %><br/>
+      <%= f.text_field :customer %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br/>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :linkto %><br/>
+      <%= f.text_field :linkto %>
+    </div>
+    <div class="field">
+      <%= f.label :startdate %><br/>
+      <input id="job_startdate" name="job[startdate]" type="text" value="<%= @job.startdate %>" data-provide='datepicker'>
+    </div>
+    <div class="field">
+      <%= f.label :enddate %><br/>
+      <input id="job_enddate" name="job[enddate]" type="text" value="<%= @job.enddate %>" data-provide='datepicker'>
+    </div>
+    <div class="field">
+      <%= f.label :price %><br/>
+      <%= f.text_field :price %>
+    </div>
+    <div class="field">
+      <%= f.label :status %><br/>
+      <%= f.select :status,
+                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"]],
+                                      @job.status) %>
+    </div>
+    <div class="actions">
+      <input name="commit" type="submit" value="Update Job" class="btn btn-success pull-right">
+    </div>
+<% end %>

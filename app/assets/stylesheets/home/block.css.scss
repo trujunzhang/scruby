@@ -1,0 +1,46 @@
+
+.block.white-bg:before, .block.white-bg:after, .block.gray-bg:before,
+.block.gray-bg:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: url(..assets/border-white-top.png) top left repeat-x;
+  z-index: 1;
+}
+
+.block.white-bg:after {
+  top: auto;
+  bottom: -6px;
+  background-image: url(..assets/border-white-btm.png);
+}
+
+.block.gray-bg:before {
+  background-image: url(..assets/border-gray-top.png);
+}
+
+.block.gray-bg:after {
+  top: auto;
+  bottom: -6px;
+  background-image: url(..assets/border-gray-btm.png);
+}
+
+
+.block.img-bg.img2 {
+  background-image: url(..assets/bg2.jpg);
+}
+
+
+.blocked {
+  display: block;
+}
+
+.no-before:before {
+  display: none !important;
+}
+
+.no-after:after {
+  display: none !important;
+}

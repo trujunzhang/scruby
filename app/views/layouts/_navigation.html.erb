@@ -1,0 +1,279 @@
+<div class="landing-navigation hidden-xs hidden-sm" id="main_menu">
+  <div class="container">
+    <a id="top"></a>
+    <div class="links pull-left">
+      <div class="logo">
+        <div class="header-logo">
+          <a href="/">
+            <img alt="Logo white" src="/assets/logo-white.png" width="130" height="30">
+          </a>
+        </div>
+      </div>
+      <div class="dropdown" dropdown_selector=".course-dropdown-menu" menu_dropdown="">
+        <span>Showcases</span>
+        <div class="course-dropdown-menu">
+          <div class="inner">
+            <div class="course-links">
+              <section class="tracks">
+                <div class="label">Become a Software Engineer</div>
+                <ul>
+                  <li class="course-icon-link web-track">
+                    <a href="/software-engineering-track"><i class="fa fa-tasks fa-fw"></i>
+                      Software Engineering Track
+                    </a></li>
+                </ul>
+              </section>
+              <section class="tracks">
+                <div class="label">Become a Junior Web Developer</div>
+                <ul>
+                  <li class="course-icon-link web-track">
+                    <a href="/web-developer-career-track"><i class="fa fa-desktop fa-fw"></i>
+                      Full Stack Web Developer Track
+                    </a></li>
+                </ul>
+              </section>
+              <section class="tracks">
+                <div class="label">Become a Product Designer</div>
+                <ul>
+                  <li class="course-icon-link web-track">
+                    <a href="/product-design-bootcamp"><i class="fa fa-picture-o fa-fw"></i>
+                      Product Design Track
+                    </a></li>
+                </ul>
+              </section>
+              <section class="courses">
+                <div class="label">Broaden Your Skills</div>
+                <ul>
+                  <li class="course-icon-link web-dev">
+                    <a href="/web-development-bootcamp"><i class="fa fa-terminal fa-fw"></i>
+                      Rails Web Development Course
+                    </a></li>
+                  <li class="course-icon-link frontend">
+                    <a href="/frontend-development-bootcamp"><i class="fa fa-code fa-fw"></i>
+                      Frontend Web Development Course
+                    </a></li>
+                  <li class="course-icon-link design">
+                    <a href="/ux-design-bootcamp"><i class="fa fa-picture-o fa-fw"></i>
+                      UX/UI Design Course
+                    </a></li>
+                  <li class="course-icon-link android">
+                    <a href="/android-bootcamp"><i class="fa fa-android fa-fw"></i>
+                      Android Development Course
+                    </a></li>
+                  <li class="course-icon-link ios">
+                    <a href="/ios-bootcamp"><i class="fa fa-apple fa-fw"></i>
+                      iOS Development Course
+                    </a></li>
+                </ul>
+              </section>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <a href="https://www.freelancer.com/u/wanghaofree720.html">Freelancer</a>
+      <a href="https://www.upwork.com/freelancers/~01acfe85619aeda9d8">Upwork</a>
+    </div>
+    <div class="links pull-right">
+
+      <% if user_signed_in? %>
+          <li>
+            <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+          </li>
+      <% else %>
+          <li>
+            <%= link_to 'Login', new_user_session_path %>
+          </li>
+      <% end %>
+      <% if user_signed_in? %>
+          <li>
+            <%= link_to 'Edit account', edit_user_registration_path %>
+          </li>
+      <% end %>
+
+      <div class="divider">
+        |
+      </div>
+      <%= link_to 'Sign up', new_user_registration_path, class: "enroll-btn btn" %>
+      <!--<a class="enroll-btn btn" href="https://www.upwork.com/freelancers/~01acfe85619aeda9d8">Enroll </a>-->
+
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="mobile-nav-container visible-xs visible-sm ng-scope" ng_class="{'full-height': menuOpen}" ng_controller="MobileNavCtrl" ng_init="init()">
+  <div class="mobile-nav-header">
+    <div class="bloc-main">
+      <a href="/">
+        <img alt="Square 50x50 black" src="https://cdn1.bloc.io/assets/logos/square-50x50-black-ccaccfb5011c3f2b18ee5afc37d86388.png">
+      </a></div>
+    <div class="menu-button" ng_click="toggleMenu()" ng_hide="menuOpen"></div>
+    <div class="menu-x icon fa fa-close ng-hide" ng_click="toggleMenu()" ng_hide="!menuOpen"></div>
+  </div>
+  <div class="mobile-menu">
+    <div class="mobile-nav left" ng_class="{&quot;left&quot;: subNavPosition + &quot;%&quot;}">
+      <ul class="mobile-list-nav">
+        <li id="programList" ng_class="{active: tog==1}" ng_click="toggleProgramList()" class="active">
+          Programs
+        </li>
+        <li id="aboutList" ng_class="{active: tog==2}" ng_click="toggleAboutList()">
+          About
+        </li>
+        <li id="contactList" ng_class="{active: tog==3}" ng_click="toggleContactList()">
+          Contact
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-subnav-list" ng_style="{&quot;left&quot;: subNavPosition + &quot;%&quot;}" style="left: 0%;">
+      <div class="list-group">
+        <ul class="link-list">
+          <li>
+            <a href="/enroll">Enroll</a>
+          </li>
+          <li>
+            <a href="/sign_in">Log in / Register</a>
+          </li>
+        </ul>
+        <div class="label">Become a Software Engineer</div>
+        <ul class="link-list">
+          <li>
+            <a href="/software-engineering-track"><i class="icon fa fa-tasks"></i>
+              Software Engineering Track
+            </a></li>
+        </ul>
+        <div class="label">Become a Junior Web Developer</div>
+        <ul class="link-list">
+          <li>
+            <a href="/web-developer-career-track"><i class="icon fa fa-desktop fa-fw"></i>
+              Full Stack Web Developer Track
+            </a></li>
+        </ul>
+        <div class="label">
+          Broaden Your Skills
+        </div>
+        <ul class="link-list">
+          <li>
+            <a href="/web-development-bootcamp"><i class="icon icon-web-development"></i>
+              Rails Web Development Course
+            </a></li>
+          <li>
+            <a href="/frontend-development-bootcamp"><i class="icon icon-frontend"></i>
+              Frontend Web Development Course
+            </a></li>
+          <li>
+            <a href="/android-bootcamp"><i class="icon icon-android"></i>
+              Android Mobile Development Course
+            </a></li>
+          <li>
+            <a href="/ios-bootcamp"><i class="icon icon-ios"></i>
+              iOS Mobile Development Course
+            </a></li>
+          <li>
+            <a href="/ux-design-bootcamp"><i class="icon icon-design"></i>
+              UX/UI Design Course
+            </a></li>
+        </ul>
+      </div>
+      <div class="list-group">
+        <ul class="link-list">
+          <li>
+            <a href="/mentors">Mentors</a>
+          </li>
+          <li>
+            <a href="/alumni">Alumni</a>
+          </li>
+          <li>
+            <a href="/about">Our Team | Jobs</a>
+          </li>
+          <li>
+            <a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+          </li>
+          <li>
+            <a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc's Diversity
+              Scholarship</a>
+          </li>
+          <li>
+            <a href="/faq">FAQ</a>
+          </li>
+          <li>
+            <a href="http://blog.bloc.io">Blog</a>
+          </li>
+          <li>
+            <a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+          </li>
+          <li>
+            <a href="/privacy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/terms">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+      <div class="list-group">
+        <div class="nav-email-form">
+          <div class="label no-border">
+            Sign Up For Our Mailing List
+          </div>
+          <form class="emelyn-form-elements ng-pristine ng-valid-email ng-invalid ng-invalid-required" id="nav_email_capture" name="nav_email_capture">
+            <div class="input-wrapper email">
+              <input class="input-dark ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" id="email" name="email" ng_model="subscription.email" required="required" type="email">
+            </div>
+            <div class="input-wrapper submit">
+              <input class="btn btn-mini" id="nav_email_signup_btn" ng_click="submit()" ng_disabled="isSubmitDisabled()" type="submit" value="Send" disabled="disabled">
+            </div>
+          </form>
+        </div>
+        <ul class="link-list">
+          <li class="contact">
+            <a href="mailto:hello@bloc.io"><i class="icon fa fa-envelope-o fa-nav"></i>
+              hello@bloc.io
+            </a>
+          </li>
+          <li class="contact">
+<span>
+<i class="icon fa fa-phone fa-nav"></i>
+<div class="contact-wrapper">
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</span>
+          </li>
+          <li class="contact">
+<span>
+<i class="icon fa fa-phone fa-nav"></i>
+<div class="contact-wrapper">
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5692
+</div>
+</span>
+          </li>
+        </ul>
+        <div class="footer">
+          <div class="social-link-list-wrapper">
+            <ul class="social-link-list">
+              <li>
+                <a href="https://www.facebook.com/trybloc" target="_blank"><i class="fa fa-facebook"></i>
+                </a></li>
+              <li>
+                <a href="https://twitter.com/trybloc" target="_blank"><i class="fa fa-twitter"></i>
+                </a></li>
+              <li>
+                <a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class="fa fa-google-plus"></i>
+                </a></li>
+              <li>
+                <a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class="fa fa-youtube"></i>
+                </a></li>
+            </ul>
+
+          </div>
+          <div class="copyright">
+            COPYRIGHT © 2016 SCRABY
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

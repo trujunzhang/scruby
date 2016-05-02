@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Facebook:</b>
+  <%= @socialmedium.facebook %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @socialmedium.twitter %>
+</p>
+
+<p>
+  <b>Google:</b>
+  <%= @socialmedium.google %>
+</p>
+
+<p>
+  <b>Linkedin:</b>
+  <%= @socialmedium.linkedin %>
+</p>
+
+<p>
+  <b>Offacebooklikes:</b>
+  <%= @socialmedium.ofFacebookLikes %>
+</p>
+
+
+<%= link_to 'Edit', edit_socialmedium_path(@socialmedium) %> |
+<%= link_to 'Back', socialmedia_path %>

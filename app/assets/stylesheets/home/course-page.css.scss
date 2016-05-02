@@ -1,0 +1,36 @@
+
+.course-page .page-section {
+  padding: 32px
+}
+
+.course-page .page-section > *:last-child {
+  margin-bottom: 0
+}
+
+@media (min-width: 992px) {
+  .course-page .page-section {
+    padding: 72px
+  }
+}
+
+.course-page .page-section.post-separator-box > *:first-child {
+  margin-top: 145px
+}
+
+@media (max-width: 768px) {
+  .course-page .page-section.post-separator-box > *:first-child {
+    margin-top: 0
+  }
+}
+
+
+.course-page .page-section-inner {
+  max-width: 1160px;
+  margin: 0 auto
+}
+
+@media (max-width: 767px) {
+  .course-page .page-section-inner {
+    padding: 0
+  }
+}

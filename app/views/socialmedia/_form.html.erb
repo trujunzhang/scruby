@@ -1,0 +1,37 @@
+<%= form_for(@socialmedium) do |f| %>
+  <% if @socialmedium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@socialmedium.errors.count, "error") %> prohibited this socialmedium from being saved:</h2>
+
+      <ul>
+      <% @socialmedium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :facebook %><br />
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :google %><br />
+    <%= f.text_field :google %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label :ofFacebookLikes %><br />
+    <%= f.text_field :ofFacebookLikes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

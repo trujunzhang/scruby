@@ -1,0 +1,349 @@
+
+.course-page .program-highlights .program-highlights-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 70px
+}
+
+@media (max-width: 768px) {
+  .course-page .program-highlights .program-highlights-list {
+    margin-bottom: 0
+  }
+}
+
+.course-page .program-highlights .program-highlights-list li {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  clear: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  font-weight: 300
+}
+
+@media (max-width: 768px) {
+  .course-page .program-highlights .program-highlights-list li:last-child {
+    margin-bottom: 0
+  }
+}
+
+.course-page .program-highlights .program-highlights-list .icon {
+  float: left;
+  margin-right: 24px;
+  max-width: 32px;
+  min-width: 32px;
+  width: 32px;
+  display: block
+}
+
+.course-page .program-highlights .program-highlights-list .label {
+  overflow: hidden;
+  position: relative;
+  top: -0.5rem
+}
+
+@media (max-width: 768px) {
+  .course-page .program-highlights .program-highlight-audience {
+    display: none
+  }
+}
+
+.course-page .program-highlights .animation.web_dev_track #Ruby {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev_track #Rails {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev_track #Server {
+  -webkit-animation: float-sm 2s linear infinite;
+  animation: float-sm 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev_track #HTML5 {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev_track #CSS {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev_track #_x3C__x2F__x3E_ {
+  -webkit-animation: float-sm 2s linear infinite;
+  animation: float-sm 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #Ai {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #HTML5 {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #Ps_1_ {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #CSS {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #Sketch {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #Sketchbook {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design_track #Code {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.web_dev #Ruby {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.frontend #CSS {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.frontend #HTML5 {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.frontend #Code {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.frontend #Cursor_2_ {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design #Sketch {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design #Photoshop {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design #Ai {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.design #invision {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.android #Google_Play {
+  -webkit-animation: float-lg 2s linear infinite;
+  animation: float-lg 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.android #Java {
+  -webkit-animation: float-sm 2s linear infinite;
+  animation: float-sm 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.android #RSS {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.android #Sublime_Text {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.ios #iCloud {
+  -webkit-animation: float-sm 2s linear infinite;
+  animation: float-sm 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.ios #Swift {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.ios #Code {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.ios #Sublime {
+  -webkit-animation: float-md 2s linear infinite;
+  animation: float-md 2s linear infinite;
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+.course-page .program-highlights .animation.ios #App_Store {
+  -webkit-animation: float-sm 2s linear infinite;
+  animation: float-sm 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+
+.course-page.short_version .program-highlights .animation {
+  position: absolute;
+  right: 0;
+  width: 460px
+}
+
+@media (max-width: 992px) {
+  .course-page.short_version .program-highlights .program-highlights-list {
+    margin-bottom: 16px
+  }
+}
+
+

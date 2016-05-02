@@ -1,0 +1,32 @@
+
+.press-articles-container {
+  background: #e6e6e6;
+  text-align: center;
+  padding: 1.25rem 1.25rem 0.6rem;
+  overflow: hidden
+}
+
+.press-articles-container .press-articles {
+  display: table;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+.press-articles-container .press-link {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px
+}
+
+.press-articles-container .press-link img {
+  max-width: 100%
+}

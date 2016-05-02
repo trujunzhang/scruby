@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Crawl sites by scrapy" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Mongoid Devise" %>">
+
+  <script type="text/javascript">
+    //<![CDATA[
+    window.gon={};
+    gon.footer_email_params={"channel":"footer","course_kind":"generic"};
+    gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];
+    gon.cta_email_params={"channel":"web_dev","course_kind":"web_dev"};
+    //]]>
+  </script>
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body class="full-page-base-style" style="position: relative;" >
+<div class="course-page course-theme-red web_dev">
+  <%= render 'layouts/navigation' %>
+  <%= render 'layouts/messages' %>
+  <%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<%= link_to 'Back', itunes_path %>
+
+</br>
+
+<div class="row">
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to @itune.url do %>
+            <%= image_tag @itune.thumbnail %>
+        <% end %>
+        <div class="caption">
+          <h3><%= @itune.name %></h3>
+        </div>
+        <p>
+          <b>Developer:</b>
+          <%= link_to @itune.website do %>
+              <span><%= @itune.developer %></span>
+          <% end %>
+        </p>
+      </div>
+      <table class="table" style="padding: 0; margin: 0;">
+        <tr>
+          <td>UpdatedAt</td>
+          <td><%= @itune.appLastUpdated %></td>
+        </tr>
+        <tr>
+          <td>Ofreviews</td>
+          <td><%= @itune.ofReviews %></td>
+        </tr>
+        <tr>
+          <td>Ofreviewscurrent</td>
+          <td><%= @itune.ofReviewsCurrent %></td>
+        </tr>
+        <tr>
+          <td>Starts</td>
+          <td><%= @itune.starts %></td>
+        </tr>
+
+        <tr>
+          <td>Startscurrent</td>
+          <td><%= @itune.startsCurrent %></td>
+        </tr>
+
+        <tr>
+          <td>Version</td>
+          <td><%= @itune.version %></td>
+        </tr>
+      </table>
+      <div class="panel-body">
+        <input class="btn btn-primary pull-right" type="button" value="ENQUIRY">
+      </div>
+    </div>
+  </div>
+</div>
+
