@@ -44,6 +44,12 @@
       <%= f.text_field :price %>
     </div>
     <div class="field">
+      <%= f.label :jobtype %><br/>
+      <%= f.select :jobtype,
+                   options_for_select([["Once", "once"], ["Schedule", "schedule"]],
+                                      @job.status) %>
+    </div>
+    <div class="field">
       <%= f.label :status %><br/>
       <%= f.select :status,
                    options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"]],
