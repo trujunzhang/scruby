@@ -31,7 +31,7 @@ set :deploy_to, '/home/deploy/deploy_test'
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
-set :linked_files, %w{config/secrets.yml config/mongoid.yml}
+set :linked_files, %w{config/secrets.yml config/mongoid.yml config/local_env.yml}
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/export','public/tb')
 # Default value for default_env is {}
