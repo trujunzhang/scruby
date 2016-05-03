@@ -47,6 +47,12 @@
       <%= f.text_field :price %>
     </div>
     <div class="field">
+      <%= f.label :from %><br/>
+      <%= f.select :from,
+                   options_for_select([["Freelance", "freelance"], ["Upwork", "upwork"]],
+                                      @job.from) %>
+    </div>
+    <div class="field">
       <%= f.label :jobtype %><br/>
       <%= f.select :jobtype,
                    options_for_select([["Once", "once"], ["Schedule", "schedule"]],
