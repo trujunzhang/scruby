@@ -5,6 +5,10 @@ require 'active_support/core_ext'
 
 
 class JobsController < ApplicationController
+  before_filter :authenticate_user!
+  ## if you want spesific action for require authentication
+  ## before_filter :authenticate_user!, :only => [:action1, :action2]
+
   # GET /jobs
   # GET /jobs.json
   def index
