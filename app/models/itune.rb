@@ -1,5 +1,7 @@
 class Itune
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :guid, type: String
   field :updateAt, type: String
   field :name, type: String

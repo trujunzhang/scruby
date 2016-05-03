@@ -1,5 +1,7 @@
 class Googleplay
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :url, type: String
   field :cluster, type: String
   field :category, type: String
