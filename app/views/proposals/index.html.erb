@@ -1,21 +1,31 @@
-<h1>Listing proposals</h1>
+<div class='container' id="showcases" data-ctrl="jobs">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-  </tr>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Listing proposals</div>
+  <div class="panel-body">
 
-<% @proposals.each do |proposal| %>
-  <tr>
-    <td><%= proposal.title %></td>
-    <td><%= proposal.content %></td>
-    <td><%= link_to 'Show', proposal %></td>
-  </tr>
-<% end %>
-</table>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Show</th>
+    </tr>
+
+    <% @proposals.each do |proposal| %>
+        <tr>
+          <td><%= proposal.title %></td>
+          <td><%=raw proposal.content %></td>
+          <td><%= link_to 'Show', proposal %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
 
 <br />
-
 <%= link_to 'New Proposal', new_proposal_path %>
+
+</div>
