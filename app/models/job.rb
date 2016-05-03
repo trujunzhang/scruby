@@ -1,6 +1,7 @@
 class Job
   include Mongoid::Document
-  field :guid, type: String
+  include Mongoid::Timestamps
+
   field :title, type: String
   field :jobtype, type: String
   field :proposalid, type: String
@@ -12,6 +13,4 @@ class Job
   field :enddate, type: String
   field :price, type: String
   field :status, type: String
-  field :createat, type: String
-  field :updatedat, type: String
 end
