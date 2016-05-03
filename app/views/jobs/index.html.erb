@@ -5,53 +5,51 @@
     <div class="panel-heading">Listing jobs</div>
     <div class="panel-body">
 
+      <!-- Table -->
+      <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Customer</th>
+          <th>Description</th>
+          <th>Duration</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Type</th>
+          <th>Show</th>
+        </tr>
+        </thead>
+
+        <% @jobs.each do |job| %>
+            <tr>
+              <td>
+                <%= link_to job.url do %>
+                    <%= job.title %>
+                <% end %>
+              </td>
+              <td><%= job.customer %></td>
+              <td><%= raw job.description %></td>
+              <td>
+                <%= job.startdate %>
+                -
+                <%= job.enddate %>
+              </td>
+              <td><%= job.price %></td>
+              <td><%= job.status %></td>
+              <td><%= job.jobtype %></td>
+              <td>
+                <%= link_to 'Show', job %>
+              </td>
+            </tr>
+        <% end %>
+      </table>
     </div>
-
-    <!-- Table -->
-    <table class="table table-striped table-bordered" cellspacing="0" width="100%">
-      <thead>
-      <tr>
-        <th>Title</th>
-        <th>Customer</th>
-        <th>Description</th>
-        <th>Duration</th>
-        <th>Price</th>
-        <th>Status</th>
-        <th>Type</th>
-        <th>Show</th>
-      </tr>
-      </thead>
-
-      <% @jobs.each do |job| %>
-          <tr>
-            <td>
-              <%= link_to job.url do %>
-                  <%= job.title %>
-              <% end %>
-            </td>
-            <td><%= job.customer %></td>
-            <td><%=raw job.description %></td>
-            <td>
-              <%= job.startdate %>
-              -
-              <%= job.enddate %>
-            </td>
-            <td><%= job.price %></td>
-            <td><%= job.status %></td>
-            <td><%= job.jobtype %></td>
-            <td>
-              <%= link_to 'Show', job %>
-            </td>
-          </tr>
-      <% end %>
-    </table>
   </div>
-
   <div class="pagination">
     <%= will_paginate @jobs, :renderer => BootstrapPagination::Rails %>
   </div>
 
-  <br />
+  <br/>
   <%= link_to 'New Job', new_job_path %>
 
 </div>
