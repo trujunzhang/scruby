@@ -1,8 +1,13 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
 class ProposalsController < ApplicationController
   # GET /proposals
   # GET /proposals.json
   def index
-    @proposals = Proposal.all
+    @proposals = Proposal.all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
 
     respond_to do |format|
       format.html # index.html.erb

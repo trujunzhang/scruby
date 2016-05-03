@@ -12,7 +12,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all.order_by(:guid => 'desc').paginate(page: params[:page], per_page: 50)
+    @jobs = Job.all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
 
     respond_to do |format|
       format.html # index.html.erb

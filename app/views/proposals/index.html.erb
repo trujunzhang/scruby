@@ -25,6 +25,10 @@
     </div>
   </div>
 
+  <div class="pagination">
+    <%= will_paginate @jobs, :renderer => BootstrapPagination::Rails %>
+  </div>
+
   <br/>
   <%= link_to 'New Proposal', new_proposal_path %>
 
