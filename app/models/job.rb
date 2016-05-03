@@ -3,6 +3,7 @@ class Job
   field :guid, type: String
   field :title, type: String
   field :jobtype, type: String
+  field :proposalid, type: String
   field :url, type: String
   field :customer, type: String
   field :description, type: String
