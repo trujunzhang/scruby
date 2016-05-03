@@ -2,24 +2,16 @@
 
 <table>
   <tr>
-    <th>Jobid</th>
+    <th>Title</th>
     <th>Content</th>
-    <th>Created-at</th>
-    <th>Updated-at</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @proposals.each do |proposal| %>
   <tr>
-    <td><%= proposal.jobid %></td>
+    <td><%= proposal.title %></td>
     <td><%= proposal.content %></td>
-    <td><%= proposal.createdat %></td>
-    <td><%= proposal.updatedat %></td>
     <td><%= link_to 'Show', proposal %></td>
-    <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
-    <td><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
