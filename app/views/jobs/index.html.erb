@@ -1,8 +1,13 @@
 <div class='container' id="showcases" data-ctrl="jobs">
 
-  <h1>Listing jobs</h1>
+  <div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Listing jobs</div>
+    <div class="panel-body">
 
-  <div class="row" id="cases-table">
+    </div>
+
+    <!-- Table -->
     <table class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
       <tr>
@@ -40,15 +45,16 @@
           </tr>
       <% end %>
     </table>
-
   </div>
 
   <div class="pagination">
-    <%= will_paginate @itunes, :renderer => BootstrapPagination::Rails %>
+    <%= will_paginate @jobs, :renderer => BootstrapPagination::Rails %>
   </div>
 
-  <br/>
-
+  <br />
   <%= link_to 'New Job', new_job_path %>
 
 </div>
+
+
+
