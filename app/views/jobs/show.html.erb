@@ -39,11 +39,10 @@
           <td><%= @job.enddate %></td>
         </tr>
       </table>
-      <div>
+      <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
         <b class="pull-left">Description:</b>
-        <p>
+        </br>
           <%=raw @job.description %>
-        </p>
       </div>
       <div class="panel-body">
         <%= link_to 'Back', jobs_path, class:"btn btn-primary pull-left",type:"button" %>
