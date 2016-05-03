@@ -17,6 +17,8 @@
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
 
+//= require tinymce-jquery
+
 //= require number_helpers
 //= require MobileNavController
 //= require NavbarController
