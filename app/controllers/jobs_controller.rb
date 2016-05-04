@@ -10,11 +10,20 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    _all = Job.all
+    @jobs = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @jobs }
+
+      format.json {
+        render :json => {
+            :jobs => @jobs,
+            :count => @count
+        }
+      }
     end
   end
 

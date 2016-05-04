@@ -1,7 +1,10 @@
 <div class='container' id="showcases" data-ctrl="jobs">
 
   <br/>
-  <%= link_to 'New Job', new_job_path %>
+  <div class="row">
+    <%= link_to 'New Job', new_job_path %>
+    <h3 style="float: right;">Count: <span><%= @count %></span></h3>
+  </div>
   </br>
 
   <div class="panel panel-primary">
