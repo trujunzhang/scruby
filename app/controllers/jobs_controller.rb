@@ -5,6 +5,7 @@ require 'active_support/core_ext'
 
 
 class JobsController < ApplicationController
+  before_filter :authenticate_user!
 
   # GET /jobs
   # GET /jobs.json

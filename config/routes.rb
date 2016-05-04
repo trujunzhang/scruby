@@ -1,6 +1,6 @@
 Scruby::Application.routes.draw do
 
-  resources :proposals
+
   resources :socialmedia
 
   authenticated :user do
@@ -21,6 +21,7 @@ Scruby::Application.routes.draw do
   resources :googleplays
 
   resources :jobs
+  resources :proposals
 
   resources :application do
     collection do

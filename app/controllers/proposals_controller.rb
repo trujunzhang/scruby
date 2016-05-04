@@ -4,6 +4,7 @@ require 'active_support'
 require 'active_support/core_ext'
 
 class ProposalsController < ApplicationController
+  before_filter :authenticate_user!
 
   # GET /proposals
   # GET /proposals.json
