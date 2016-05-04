@@ -7,11 +7,19 @@ class ItunesController < ApplicationController
   # GET /itunes
   # GET /itunes.json
   def index
-    @itunes = Itune.all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    _all = Itune.all
+    @itunes = _all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @itunes }
+
+      format.json {
+        render :json => {
+            :jobs => @itunes,
+            :count => @count
+        }
+      }
     end
   end
 
