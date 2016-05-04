@@ -1,9 +1,5 @@
 Scruby::Application.routes.draw do
 
-  devise_scope :user do
-    match '/sign-in' => "devise/sessions#new", :as => :login
-  end
-
   resources :proposals
   resources :socialmedia
 
