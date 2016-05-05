@@ -52,7 +52,6 @@
       <%= f.select(:proposalid, Proposal.all.map {|lc| [lc.title, lc._id]} ) %>
     </div>
 
-
     <div class="field">
       <%= f.label :from %><br/>
       <%= f.select :from,
