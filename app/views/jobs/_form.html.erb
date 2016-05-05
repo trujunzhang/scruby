@@ -49,7 +49,7 @@
 
     <div class="field">
       <%= f.label :proposal %><br/>
-      <%= f.select(:proposalid, Proposal.all.map {|lc| [lc.title, lc._id]} ) %>
+      <%= f.select(:proposalid, Proposal.all.map { |lc| [lc.title, lc._id] }, :include_blank => true) %>
     </div>
 
     <div class="field">
