@@ -51,7 +51,6 @@ class JobsController < ApplicationController
   # GET /jobs/1/edit
   def edit
     @job = Job.find(params[:id])
-    @proposals = Proposal.all
   end
 
   # POST /jobs

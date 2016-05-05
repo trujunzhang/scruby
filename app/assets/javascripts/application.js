@@ -106,9 +106,6 @@ $(function () {
     $('#exportButton').click(function () {
         showSendEmailPanel();
     });
-
-    $('.combobox').combobox();
-
 });
 
 var showSendEmailPanel = function () {
