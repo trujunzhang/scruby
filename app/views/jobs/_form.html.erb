@@ -46,6 +46,13 @@
       <%= f.label :price %><br/>
       <%= f.text_field :price %>
     </div>
+
+    <div class="field">
+      <%= f.label :proposal %><br/>
+      <%= f.collection_select :proposals, Proposals.all, :id, :name, :selected => @proposals.id  %>
+    </div>
+
+
     <div class="field">
       <%= f.label :from %><br/>
       <%= f.select :from,
