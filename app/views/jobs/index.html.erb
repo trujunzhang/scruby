@@ -1,11 +1,24 @@
 <div class='container' id="showcases" data-ctrl="jobs">
 
-  <br/>
-  <div class="row">
-    <%= link_to 'New Job', new_job_path %>
-    <h3 style="float: right;">Count: <span><%= @count %></span></h3>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Search jobs</div>
+    <div class="panel-body">
+      <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+          <%= submit_tag "Search" %>
+      <% end %>
+    </div>
   </div>
-  </br>
+
+  <div class="row">
+    <nav>
+      <ul class="pager">
+        <li class="previous"> <%= link_to 'New Job', new_job_path %></li>
+        <li class="next"><h3 style="float: right;">Count: <span><%= @count %></span></h3></li>
+      </ul>
+    </nav>
+  </div>
 
   <div class="panel panel-primary">
     <!-- Default panel contents -->
