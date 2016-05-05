@@ -107,6 +107,7 @@ $(function () {
         showSendEmailPanel();
     });
 
+    $('.combobox').combobox();
 
 });
 

@@ -49,7 +49,7 @@
 
     <div class="field">
       <%= f.label :proposal %><br/>
-      <%= f.collection_select :proposals, Proposals.all, :id, :name, :selected => @proposals.id  %>
+      <%= f.select(:proposalid, Proposal.all.map {|lc| [lc.title, lc._id]} ) %>
     </div>
 
 
