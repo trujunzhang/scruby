@@ -223,62 +223,62 @@ code {
 code span {
   font-weight: normal !important
 }
-
-table {
-  width: 100%
-}
-
-table tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.05)
-}
-
-table tr.section {
-  background: none
-}
-
-table tr.section th {
-  padding-top: 40px
-}
-
-table th {
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px
-}
-
-table td {
-  padding: 10px
-}
-
-table .active {
-  color: #289227
-}
-
-table .inactive {
-  color: #e74c3c
-}
-
-table.no-zebras tr:nth-child(even) {
-  background: none
-}
-
-tr {
-  margin: 0px;
-  padding: 0px
-}
-
-tr h1, tr h2, tr h3, tr h4, tr h5 {
-  margin: 0px
-}
-
-tr td {
-  margin: 2px;
-  padding: 2px
-}
-
-tr .tiny {
-  display: none
-}
+//
+//table {
+//  width: 100%
+//}
+//
+//table tr:nth-child(even) {
+//  background: rgba(0, 0, 0, 0.05)
+//}
+//
+//table tr.section {
+//  background: none
+//}
+//
+//table tr.section th {
+//  padding-top: 40px
+//}
+//
+//table th {
+//  font-weight: bold;
+//  font-size: 18px;
+//  padding: 10px
+//}
+//
+//table td {
+//  padding: 10px
+//}
+//
+//table .active {
+//  color: #289227
+//}
+//
+//table .inactive {
+//  color: #e74c3c
+//}
+//
+//table.no-zebras tr:nth-child(even) {
+//  background: none
+//}
+//
+//tr {
+//  margin: 0px;
+//  padding: 0px
+//}
+//
+//tr h1, tr h2, tr h3, tr h4, tr h5 {
+//  margin: 0px
+//}
+//
+//tr td {
+//  margin: 2px;
+//  padding: 2px
+//}
+//
+//tr .tiny {
+//  display: none
+//}
 
 a {
   font-weight: 900;
