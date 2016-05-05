@@ -10,8 +10,17 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
+
     _all = Job.all
-    @jobs = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+
+    if params[:search]
+      _search = params[:search]
+      _all=Job.where(:title.all => ['site']).order_by(:updated_at => 'desc')
+    else
+      _all = Job.all.order_by(:updated_at => 'desc')
+    end
+
+    @jobs = _all.paginate(page: params[:page], per_page: 50)
     @count = _all.count
 
     respond_to do |format|
