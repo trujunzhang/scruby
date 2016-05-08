@@ -7,7 +7,7 @@ namespace :vpns do
 
     _socialmedium = Socialmedium.new
     _socialmedium.facebook = "wanghao"
-    _socialmedium.twice = "djzhang"
+    _socialmedium.twitter = "djzhang"
     _socialmedium.google = "trujunzhang"
     _socialmedium.linkedin = "wh"
     _socialmedium.ofFacebookLikes = 123
