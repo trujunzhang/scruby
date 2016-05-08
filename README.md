@@ -7,6 +7,10 @@ rails generate scaffold job guid title jobtype url customer description linkto s
 rails generate scaffold socialmedia facebook twitter google linkedin ofFacebookLikes	 
 
 rails generate scaffold proposal jobid content created-at updated-at	 
+
+    
+## Task
+rails g task vpns auto_connection
     
 * rake secret
 * Once these are added, run bundle --binstubs and then cap install STAGES=production to generate your capistrano configuration.

@@ -1,5 +1,5 @@
 
-every :hour do
-  rake "events:fetch"
+every 5.minutes do
+  rake "vpns:auto_connection"
 end
 
