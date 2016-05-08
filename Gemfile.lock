@@ -69,6 +69,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chronic (0.10.2)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -228,6 +229,8 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
     will_paginate (3.1.0)
     will_paginate-bootstrap (1.0.1)
       will_paginate (>= 3.0.3)
@@ -273,6 +276,7 @@ DEPENDENCIES
   tinymce-rails
   uglifier (>= 1.0.3)
   unicorn
+  whenever
   will_paginate-bootstrap
 
 BUNDLED WITH

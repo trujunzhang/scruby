@@ -5,3 +5,14 @@
 require File.expand_path('../config/application', __FILE__)
 
 Scruby::Application.load_tasks
+
+
+
+namespace :events do
+  desc "Rake task to get events data"
+  task :fetch => :environment do
+    jobs = Job.all
+    count = jobs.count
+    puts "#{Time.now} :#{count} - Success!"
+  end
+end
