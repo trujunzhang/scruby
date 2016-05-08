@@ -5,6 +5,8 @@ namespace :vpns do
     # count = jobs.count
     # puts "#{Time.now} :#{count} - Success!"
 
+    puts "#{Time.now} - Success!"
+
     _socialmedium = Socialmedium.new
     _socialmedium.facebook = "wanghao"
     _socialmedium.twitter = "djzhang"

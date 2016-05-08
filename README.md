@@ -11,6 +11,8 @@ rails generate scaffold proposal jobid content created-at updated-at
     
 ## Task
 rails g task vpns auto_connection
+
+whenever --update-crontab
     
 * rake secret
 * Once these are added, run bundle --binstubs and then cap install STAGES=production to generate your capistrano configuration.
