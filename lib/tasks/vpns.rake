@@ -1,9 +1,18 @@
 namespace :vpns do
   desc "Auto connect VPN"
   task :auto_connection => :environment do
-    jobs = Job.all
-    count = jobs.count
-    puts "#{Time.now} :#{count} - Success!"
+    # jobs = Job.all
+    # count = jobs.count
+    # puts "#{Time.now} :#{count} - Success!"
+
+    _socialmedium = Socialmedium.new
+    _socialmedium.facebook = "wanghao"
+    _socialmedium.twice = "djzhang"
+    _socialmedium.google = "trujunzhang"
+    _socialmedium.linkedin = "wh"
+    _socialmedium.ofFacebookLikes = 123
+
+    _socialmedium.save
   end
 
 end
