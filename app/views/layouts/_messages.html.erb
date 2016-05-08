@@ -1,13 +1,12 @@
 <div class="row">
-
-  <% flash.each do |name, msg| %>
-      <% if msg.is_a?(String) %>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <div class="container">
+      <% flash.each do |name, msg| %>
+          <% if msg.is_a?(String) %>
+              <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert alert-danger alert-block devise-bs"%>
+          <% end %>
       <% end %>
-  <% end %>
-
+  </div>
 </div>
-
 
 <div class="row">
   <div class="container" id="email_panel">

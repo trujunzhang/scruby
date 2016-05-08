@@ -95,6 +95,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.8)
     diff-lcs (1.2.4)
     email_spec (1.5.0)
       launchy (~> 2.1)
@@ -253,6 +254,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner (= 1.0.1)
   devise
+  devise-bootstrap-views
   email_spec
   factory_girl_rails
   figaro

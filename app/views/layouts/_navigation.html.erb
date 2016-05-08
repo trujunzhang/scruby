@@ -86,6 +86,9 @@
           </li>
       <% end %>
 
+      <% if user_signed_in? %>
+          <%= link_to "Hi "+current_user.name, edit_user_registration_path %>
+      <% end %>
 
       <div class="divider">
         |
@@ -102,7 +105,7 @@
   <div class="mobile-nav-header">
     <div class="bloc-main">
       <a href="/">
-        <img alt="Square 50x50 black" src="/assets/logo-mobile.png" >
+        <img alt="Square 50x50 black" src="/assets/logo-mobile.png">
       </a>
     </div>
     <div class="menu-button" ng_click="toggleMenu()" ng_hide="menuOpen"></div>
