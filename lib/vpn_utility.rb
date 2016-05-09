@@ -59,7 +59,6 @@ class VPNUtility
       exec _command
     end
 
-
     puts "Connected vpn uuid is #{@vpnUUID}"
     _command = "nmcli con up uuid #{@vpnUUID}"
     puts "command is #{_command}"
