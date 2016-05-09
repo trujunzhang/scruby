@@ -11,13 +11,17 @@ class VPNUtility
     plist = CFPropertyList::List.new(:file => "vpn-status.plist")
     data = CFPropertyList.native_types(plist.value)
     @index=data["index"]
-    puts "Current vpn index is #{@index}"
+    @lastUUID = data["uuid"]
+    puts "last vpn index is #{@index}, uuid is #{@lastUUID}"
   end
 
   def next
     if @count
       @next=(@index+1)% @count
-      puts "Next vpn index is #{@next}"
+      puts "Current vpn index is #{@next}"
+
+      _vpn = @vpns[@next]
+      @vpnUUID = _vpn.vpnid
 
       connection_vpn
     end
@@ -28,10 +32,11 @@ class VPNUtility
   def save
     if @count
       data = {
-          'index' => @next
+          'index' => @next,
+          'uuid' => @vpnUUID
       }
 
-      puts "Saving index is #{@next}"
+      puts "Saving index is #{@next}, uuid is #{@vpnUUID}"
 
       # create CFPropertyList::List object
       plist = CFPropertyList::List.new
@@ -45,8 +50,16 @@ class VPNUtility
   end
 
   private
-  def connection_vpn
-    puts "Connecting index is #{@next}"
+  def connection_vpn()
+    puts "Disonnecting vpn uuid is #{@lastUUID}"
+    _command = 'nmcli con down uuid #{@lastUUID}'
+    puts "command is #{_command}"
+    exec _command
+
+    puts "Connected vpn uuid is #{@vpnUUID}"
+    _command = 'nmcli con up uuid #{@vpnUUID}'
+    puts "command is #{_command}"
+    exec _command
   end
 
 
