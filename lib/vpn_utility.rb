@@ -1,4 +1,3 @@
-
 require 'cfpropertylist'
 
 class VPNUtility
@@ -27,18 +26,20 @@ class VPNUtility
   end
 
   def save
-    data["index"] = @next
+    if @count
+      data["index"] = @next
 
-    puts "Saving index is #{@next}"
-    
-    # create CFPropertyList::List object
-    plist = CFPropertyList::List.new
+      puts "Saving index is #{@next}"
 
-    # call CFPropertyList.guess() to create corresponding CFType values
-    plist.value = CFPropertyList.guess(data)
+      # create CFPropertyList::List object
+      plist = CFPropertyList::List.new
 
-    # write plist to file
-    plist.save("vpn-status.plist", CFPropertyList::List::FORMAT_BINARY)
+      # call CFPropertyList.guess() to create corresponding CFType values
+      plist.value = CFPropertyList.guess(data)
+
+      # write plist to file
+      plist.save("vpn-status.plist", CFPropertyList::List::FORMAT_BINARY)
+    end
   end
 
   private
