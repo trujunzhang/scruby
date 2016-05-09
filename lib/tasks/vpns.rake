@@ -38,7 +38,7 @@ namespace :vpns do
     # … later, read it again
     plist = CFPropertyList::List.new(:file => "vpn-status.plist")
     data = CFPropertyList.native_types(plist.value)
-    _index=data["index"]%3
+    _index=(data["index"]%3)
 
     puts "Current vpn index is #{_index}"
 
