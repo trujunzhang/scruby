@@ -27,7 +27,9 @@ class VPNUtility
 
   def save
     if @count
-      data["index"] = @next
+      data = {
+          'index' => @next
+      }
 
       puts "Saving index is #{@next}"
 
