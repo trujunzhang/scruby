@@ -56,13 +56,15 @@ class VPNUtility
     _command = "nmcli con down uuid #{@lastUUID}"
     puts "command is #{_command}"
     if @lastUUID != "ffffffff"
-      system "nmcli con down uuid #{@lastUUID}"
+      # exec "nmcli con down uuid #{@lastUUID}"
     end
 
     puts "Connected vpn uuid is #{@vpnUUID}"
     _command = "nmcli con up uuid #{@vpnUUID}"
     puts "command is #{_command}"
-    system "nmcli con up uuid #{@vpnUUID}"
+    # exec "nmcli con up uuid #{@vpnUUID}"
+
+    exec "nmcli con list"
   end
 
 
