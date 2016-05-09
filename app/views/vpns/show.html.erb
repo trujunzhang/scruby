@@ -1,15 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @vpn.name %>
-</p>
+<div class="row">
+  <div class="container form_panel">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table" style="padding: 0; margin: 0;">
+            <tr>
+              <td>Name</td>
+              <td><%= @vpn.name %></td>
+            </tr>
+            <tr>
+              <td>Vpnid</td>
+              <td><%= @vpn.vpnid %></td>
+            </tr>
+          </table>
+        </div>
+       
+        <div class="panel-body">
+          <%= link_to 'Back', vpns_path, class:"btn btn-primary pull-left",type:"button" %>
+          <%= link_to 'Edit', edit_vpn_path(@vpn), class:"btn btn-success pull-right",type:"button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>Vpnid:</b>
-  <%= @vpn.vpnid %>
-</p>
 
 
-<%= link_to 'Edit', edit_vpn_path(@vpn) %> |
-<%= link_to 'Back', vpns_path %>

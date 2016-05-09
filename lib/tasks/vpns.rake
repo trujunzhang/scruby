@@ -4,7 +4,9 @@ namespace :vpns do
     # jobs = Job.all
     # count = jobs.count
     # puts "#{Time.now} :#{count} - Success!"
-
+    # nmcli
+    # nmcli con list
+    # nmcli con up uuid <uuid>
 
     puts "#{Time.now} - Success!"
 
