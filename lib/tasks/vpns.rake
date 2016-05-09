@@ -26,21 +26,21 @@ namespace :vpns do
     }
 
     # create CFPropertyList::List object
-    plist = CFPropertyList::List.new
+    # plist = CFPropertyList::List.new
 
     # call CFPropertyList.guess() to create corresponding CFType values
-    plist.value = CFPropertyList.guess(data)
+    # plist.value = CFPropertyList.guess(data)
 
     # write plist to file
-    plist.save("vpn_status.plist", CFPropertyList::List::FORMAT_BINARY)
+    # plist.save("vpn-status.plist", CFPropertyList::List::FORMAT_BINARY)
 
 
     # … later, read it again
-    # plist = CFPropertyList::List.new(:file => "vpn_status.plist")
-    # data = CFPropertyList.native_types(plist.value)
+    plist = CFPropertyList::List.new(:file => "vpn-status.plist")
+    data = CFPropertyList.native_types(plist.value)
+    _index=data.index
 
-
-    puts "Current vpn index is #{ENV['vpn_index']}"
+    puts "Current vpn index is #{_index}"
 
     puts "#{Time.now} - Success!"
 
