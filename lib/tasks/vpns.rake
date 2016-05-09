@@ -8,6 +8,8 @@ namespace :vpns do
     # nmcli con list
     # nmcli con up uuid <uuid>
 
+    puts "Current vpn index is #{ENV['vpn_index']}"
+
     puts "#{Time.now} - Success!"
 
     # _socialmedium = Socialmedium.new
