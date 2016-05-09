@@ -16,7 +16,7 @@ class VPNUtility
 
   def next
     if @count
-      @next=data["index"]% @count
+      @next=(data["index"]+1)% @count
       puts "Next vpn index is #{@next}"
 
       connection_vpn
