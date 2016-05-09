@@ -1,6 +1,4 @@
-require 'Export_utility'
-require 'GooglePlaysGenerator'
-require 'ItunesGenerator'
+require 'excel_generator'
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
