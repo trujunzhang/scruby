@@ -12,16 +12,17 @@ class VPNUtility
     data = CFPropertyList.native_types(plist.value)
     @index=data["index"]
     @lastUUID = data["uuid"]
-    puts "last vpn index is #{@index}, uuid is #{@lastUUID}"
+    puts "Read the last vpn index is #{@index}, uuid is #{@lastUUID}"
   end
 
   def next
     if @count
       @next=(@index+1)% @count
-      puts "Current vpn index is #{@next}"
 
       _vpn = @vpns[@next]
       @vpnUUID = _vpn.vpnid
+
+      puts "Current vpn index is #{@next}, uuid is #{@vpnUUID}"
 
       connection_vpn
     end
