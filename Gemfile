@@ -28,7 +28,7 @@ gem 'mongoid'
 
 gem 'tinymce-rails'
 
-gem 'whenever'
+gem 'whenever', :require => false
 gem 'CFPropertyList'
 
 group :development do
