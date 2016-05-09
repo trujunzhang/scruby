@@ -1,4 +1,4 @@
-require 'cfpropertylist'
+require 'vpn_utility'
 
 namespace :vpns do
   desc "Auto connect VPN"
@@ -36,9 +36,12 @@ namespace :vpns do
 
 
     # … later, read it again
-    plist = CFPropertyList::List.new(:file => "vpn-status.plist")
-    data = CFPropertyList.native_types(plist.value)
-    _index=(data["index"]%13)
+    # plist = CFPropertyList::List.new(:file => "vpn-status.plist")
+    # data = CFPropertyList.native_types(plist.value)
+    # _index=(data["index"]%13)
+
+    _vpnUtility=VPNUtility.new
+    _index = _vpnUtility.getIndex
 
     puts "Current vpn index is #{_index}"
 
