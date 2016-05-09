@@ -12,6 +12,7 @@ namespace :vpns do
 
     # whenever --update-crontab
     # crontab -l
+    # crontab -e
     VPNUtility.new.next.save
   end
 
