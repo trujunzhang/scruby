@@ -9,11 +9,18 @@ class GoogleplaysController < ApplicationController
   # GET /googleplays
   # GET /googleplays.json
   def index
-    @googleplays = Googleplay.all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
-
+    _all = Googleplay.all
+    @googleplays = _all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
+    
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @googleplays}
+      format.json {
+        render :json => {
+            :jobs => @googleplays,
+            :count => @count
+        }
+      }
     end
   end
 
