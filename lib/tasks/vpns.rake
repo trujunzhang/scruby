@@ -12,49 +12,7 @@ namespace :vpns do
 
     # whenever --update-crontab
     # crontab -l
-
-
-    # create a arbitrary data structure of basic data types
-    data = {
-        'name' => 'John Doe',
-        'missing' => true,
-        'last_seen' => Time.now,
-        'friends' => ['Jane Doe', 'Julian Doe'],
-        'likes' => {
-            'me' => false
-        }
-    }
-
-    # create CFPropertyList::List object
-    # plist = CFPropertyList::List.new
-
-    # call CFPropertyList.guess() to create corresponding CFType values
-    # plist.value = CFPropertyList.guess(data)
-
-    # write plist to file
-    # plist.save("vpn-status.plist", CFPropertyList::List::FORMAT_BINARY)
-
-
-    # … later, read it again
-    # plist = CFPropertyList::List.new(:file => "vpn-status.plist")
-    # data = CFPropertyList.native_types(plist.value)
-    # _index=(data["index"]%13)
-
-    _vpnUtility=VPNUtility.new
-    _index = _vpnUtility.getIndex
-
-    puts "Current vpn index is #{_index}"
-
-    puts "#{Time.now} - Success!"
-
-    # _socialmedium = Socialmedium.new
-    # _socialmedium.facebook = "wanghao"
-    # _socialmedium.twitter = "djzhang"
-    # _socialmedium.google = "trujunzhang"
-    # _socialmedium.linkedin = "wh"
-    # _socialmedium.ofFacebookLikes = 123
-    #
-    # _socialmedium.save
+    VPNUtility.new.next.save
   end
 
 end
