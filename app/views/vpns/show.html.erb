@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vpn.name %>
+</p>
+
+<p>
+  <b>Vpnid:</b>
+  <%= @vpn.vpnid %>
+</p>
+
+
+<%= link_to 'Edit', edit_vpn_path(@vpn) %> |
+<%= link_to 'Back', vpns_path %>

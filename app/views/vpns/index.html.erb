@@ -1,0 +1,25 @@
+<h1>Listing vpns</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Vpnid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vpns.each do |vpn| %>
+  <tr>
+    <td><%= vpn.name %></td>
+    <td><%= vpn.vpnid %></td>
+    <td><%= link_to 'Show', vpn %></td>
+    <td><%= link_to 'Edit', edit_vpn_path(vpn) %></td>
+    <td><%= link_to 'Destroy', vpn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vpn', new_vpn_path %>

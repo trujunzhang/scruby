@@ -1,0 +1,25 @@
+<%= form_for(@vpn) do |f| %>
+  <% if @vpn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vpn.errors.count, "error") %> prohibited this vpn from being saved:</h2>
+
+      <ul>
+      <% @vpn.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :vpnid %><br />
+    <%= f.text_field :vpnid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

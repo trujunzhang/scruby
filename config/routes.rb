@@ -1,6 +1,9 @@
 Scruby::Application.routes.draw do
 
 
+  resources :vpns
+
+
   resources :socialmedia
 
   authenticated :user do

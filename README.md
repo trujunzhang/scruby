@@ -2,12 +2,13 @@ rails generate scaffold itunes guid updateAt name url thumbnail appLastUpdated d
 
 rails generate scaffold googleplay url cluster category price thumbnail title reviewsNum datePublished website email address
 
-rails generate scaffold job guid title jobtype url customer description linkto startdate enddate price status ceatedat updatedat
+rails generate scaffold job guid title jobtype url customer description linkto startdate enddate price status 
 
 rails generate scaffold socialmedia facebook twitter google linkedin ofFacebookLikes	 
 
-rails generate scaffold proposal jobid content created-at updated-at	 
+rails generate scaffold proposal jobid content 
 
+rails generate scaffold vpn name vpnid  	 
     
 ## Task
 rails g task vpns auto_connection
