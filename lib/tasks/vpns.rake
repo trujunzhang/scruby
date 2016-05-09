@@ -1,3 +1,5 @@
+require 'cfpropertylist'
+
 namespace :vpns do
   desc "Auto connect VPN"
   task :auto_connection => :environment do
@@ -7,6 +9,36 @@ namespace :vpns do
     # nmcli
     # nmcli con list
     # nmcli con up uuid <uuid>
+
+    # whenever --update-crontab
+    # crontab -l
+
+
+    # create a arbitrary data structure of basic data types
+    data = {
+        'name' => 'John Doe',
+        'missing' => true,
+        'last_seen' => Time.now,
+        'friends' => ['Jane Doe','Julian Doe'],
+        'likes' => {
+            'me' => false
+        }
+    }
+
+    # create CFPropertyList::List object
+    plist = CFPropertyList::List.new
+
+    # call CFPropertyList.guess() to create corresponding CFType values
+    plist.value = CFPropertyList.guess(data)
+
+    # write plist to file
+    plist.save("vpn_status.plist", CFPropertyList::List::FORMAT_BINARY)
+
+
+    # … later, read it again
+    # plist = CFPropertyList::List.new(:file => "vpn_status.plist")
+    # data = CFPropertyList.native_types(plist.value)
+
 
     puts "Current vpn index is #{ENV['vpn_index']}"
 

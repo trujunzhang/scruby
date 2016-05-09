@@ -29,6 +29,7 @@ gem 'mongoid'
 gem 'tinymce-rails'
 
 gem 'whenever'
+gem 'CFPropertyList'
 
 group :development do
   gem 'better_errors'
