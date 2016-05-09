@@ -1,12 +1,27 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
+
 class VpnsController < ApplicationController
   # GET /vpns
   # GET /vpns.json
   def index
-    @vpns = Vpn.all
+    _all = Vpn.all
+    @vpns = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @vpns }
+
+      format.json {
+        render :json => {
+            :jobs => @vpns,
+            :count => @count
+        }
+      }
     end
   end
 
