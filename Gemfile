@@ -28,7 +28,7 @@ gem 'mongoid'
 
 gem 'tinymce-rails'
 
-gem 'whenever', :require => false
+gem 'whenever'
 
 group :development do
   gem 'better_errors'
