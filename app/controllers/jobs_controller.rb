@@ -15,9 +15,9 @@ class JobsController < ApplicationController
 
     if params[:search]
       _search = params[:search]
-      _all=Job.where(:title.all => ['site']).order_by(:updated_at => 'desc')
+      _all=Job.where(:title.all => ['site']).order_by(:created_at => 'desc')
     else
-      _all = Job.all.order_by(:updated_at => 'desc')
+      _all = Job.all.order_by(:created_at => 'desc')
     end
 
     @jobs = _all.paginate(page: params[:page], per_page: 50)
