@@ -67,7 +67,7 @@
     <div class="field">
       <%= f.label :status %><br/>
       <%= f.select :status,
-                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"]],
+                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"],["Decline","decline"]],
                                       @job.status) %>
     </div>
     <div class="actions">
