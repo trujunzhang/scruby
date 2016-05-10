@@ -1,0 +1,2 @@
+module DealsdirectnavbarsHelper
+end

@@ -1,6 +1,9 @@
 Scruby::Application.routes.draw do
 
 
+  resources :dealsdirectnavbars
+
+
   resources :dealsdirectcategories
 
 
