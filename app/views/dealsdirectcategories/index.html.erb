@@ -1,0 +1,29 @@
+<h1>Listing dealsdirectcategories</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Href</th>
+    <th>Data category</th>
+    <th>Data cid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealsdirectcategories.each do |dealsdirectcategory| %>
+  <tr>
+    <td><%= dealsdirectcategory.title %></td>
+    <td><%= dealsdirectcategory.href %></td>
+    <td><%= dealsdirectcategory.data_category_id %></td>
+    <td><%= dealsdirectcategory.data_cid %></td>
+    <td><%= link_to 'Show', dealsdirectcategory %></td>
+    <td><%= link_to 'Edit', edit_dealsdirectcategory_path(dealsdirectcategory) %></td>
+    <td><%= link_to 'Destroy', dealsdirectcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dealsdirectcategory', new_dealsdirectcategory_path %>

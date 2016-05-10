@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @dealsdirectcategory.title %>
+</p>
+
+<p>
+  <b>Href:</b>
+  <%= @dealsdirectcategory.href %>
+</p>
+
+<p>
+  <b>Data category:</b>
+  <%= @dealsdirectcategory.data_category_id %>
+</p>
+
+<p>
+  <b>Data cid:</b>
+  <%= @dealsdirectcategory.data_cid %>
+</p>
+
+
+<%= link_to 'Edit', edit_dealsdirectcategory_path(@dealsdirectcategory) %> |
+<%= link_to 'Back', dealsdirectcategories_path %>

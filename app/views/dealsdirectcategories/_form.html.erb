@@ -1,0 +1,33 @@
+<%= form_for(@dealsdirectcategory) do |f| %>
+  <% if @dealsdirectcategory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealsdirectcategory.errors.count, "error") %> prohibited this dealsdirectcategory from being saved:</h2>
+
+      <ul>
+      <% @dealsdirectcategory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :href %><br />
+    <%= f.text_field :href %>
+  </div>
+  <div class="field">
+    <%= f.label :data_category_id %><br />
+    <%= f.text_field :data_category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :data_cid %><br />
+    <%= f.text_field :data_cid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

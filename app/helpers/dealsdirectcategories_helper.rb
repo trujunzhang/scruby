@@ -1,0 +1,2 @@
+module DealsdirectcategoriesHelper
+end
