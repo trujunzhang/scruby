@@ -58,6 +58,8 @@ class ApplicationController < ActionController::Base
       Googleplay.all
     elsif type == "itunes"
       Itune.all
+    elsif type == "dealsdirects"
+      Dealsdirects.all
     end
   end
 
@@ -67,6 +69,8 @@ class ApplicationController < ActionController::Base
       Googleplay.count
     elsif type == "itunes"
       Itune.count
+    elsif type == "dealsdirects"
+      Dealsdirects.count
     end
   end
 
@@ -76,6 +80,8 @@ class ApplicationController < ActionController::Base
       GooglePlaysGenerator.new("googleplays")
     elsif type == "itunes"
       ItunesGenerator.new("itunes")
+    elsif type == "dealsdirects"
+      DealsDirectsGenerator.new("dealsdirects")
     end
   end
 
