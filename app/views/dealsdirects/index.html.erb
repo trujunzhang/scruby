@@ -1,0 +1,43 @@
+<h1>Listing dealsdirects</h1>
+
+<table>
+  <tr>
+    <th>Sub1</th>
+    <th>Sub2</th>
+    <th>Sub3</th>
+    <th>Url</th>
+    <th>Guid</th>
+    <th>Brand</th>
+    <th>Title</th>
+    <th>New price</th>
+    <th>Label price</th>
+    <th>Rrp text</th>
+    <th>Thumbnail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealsdirects.each do |dealsdirect| %>
+  <tr>
+    <td><%= dealsdirect.sub1 %></td>
+    <td><%= dealsdirect.sub2 %></td>
+    <td><%= dealsdirect.sub3 %></td>
+    <td><%= dealsdirect.url %></td>
+    <td><%= dealsdirect.guid %></td>
+    <td><%= dealsdirect.brand %></td>
+    <td><%= dealsdirect.title %></td>
+    <td><%= dealsdirect.new_price %></td>
+    <td><%= dealsdirect.label_price %></td>
+    <td><%= dealsdirect.rrp_text %></td>
+    <td><%= dealsdirect.thumbnail %></td>
+    <td><%= link_to 'Show', dealsdirect %></td>
+    <td><%= link_to 'Edit', edit_dealsdirect_path(dealsdirect) %></td>
+    <td><%= link_to 'Destroy', dealsdirect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dealsdirect', new_dealsdirect_path %>

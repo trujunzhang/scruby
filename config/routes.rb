@@ -1,15 +1,10 @@
 Scruby::Application.routes.draw do
 
 
+  resources :dealsdirects
   resources :dealsdirectnavbars
-
-
   resources :dealsdirectcategories
-
-
   resources :vpns
-
-
   resources :socialmedia
 
   authenticated :user do
