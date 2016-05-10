@@ -59,7 +59,7 @@ class ApplicationController < ActionController::Base
     elsif type == "itunes"
       Itune.all
     elsif type == "dealsdirects"
-      Dealsdirects.all
+      Dealsdirect.all
     end
   end
 
@@ -70,7 +70,7 @@ class ApplicationController < ActionController::Base
     elsif type == "itunes"
       Itune.count
     elsif type == "dealsdirects"
-      Dealsdirects.count
+      Dealsdirect.count
     end
   end
 
