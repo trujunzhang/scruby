@@ -1,3 +1,9 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
 class DealsdirectsController < ApplicationController
   # GET /dealsdirects
   # GET /dealsdirects.json
