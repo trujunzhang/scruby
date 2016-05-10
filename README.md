@@ -8,7 +8,14 @@ rails generate scaffold socialmedia facebook twitter google linkedin ofFacebookL
 
 rails generate scaffold proposal jobid content 
 
-rails generate scaffold vpn name vpnid  	 
+rails generate scaffold vpn name vpnid  	
+ 
+rails generate scaffold dealsdirectcategory title href data_category_id data_cid
+         
+rails generate scaffold dealsdirectnavbar sub1 sub2 sub3 
+    
+rails generate scaffold dealsdirect sub1 sub2 sub3 url guid brand title new_price label_price rrp_text thumbnail             
+    
     
 ## Task
 rails g task vpns auto_connection
