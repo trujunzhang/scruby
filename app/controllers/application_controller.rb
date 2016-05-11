@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def run_task
     _commander = params[:commander]
-    exec _commander
+    _result = system(_commander)
 
     respond_to do |format|
       format.json do
