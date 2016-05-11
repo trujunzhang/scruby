@@ -16,8 +16,9 @@ rails generate scaffold dealsdirectnavbar sub1 sub2 sub3
     
 rails generate scaffold dealsdirect sub1 sub2 sub3 url guid brand title new_price label_price rrp_text thumbnail             
 
-rails generate scaffold scrapyapp title app_name domain 
-rails generate scaffold scrapytask title app command      
+rails generate scaffold crawler title crawler_name domain 
+rails generate scaffold task title crawler_id commander
+rails generate scaffold scheduler title crawler_id task_id commander
     
 ## Task
 rails g task vpns auto_connection

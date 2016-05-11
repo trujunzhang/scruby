@@ -1,6 +1,12 @@
 Scruby::Application.routes.draw do
 
 
+  resources :tasks
+
+
+  resources :crawlers
+
+
   resources :dealsdirects
   resources :dealsdirectnavbars
   resources :dealsdirectcategories
