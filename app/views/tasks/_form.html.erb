@@ -16,10 +16,10 @@
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :crawler_id %><br/>
-      <%= f.text_field :crawler_id %>
+      <%= f.label :crawler %><br/>
+      <%= f.select(:crawler_id, Crawler.all.map { |lc| [lc.title, lc._id] }, :include_blank => false) %>
     </div>
-    <div class="field">
+    <div class="field" style="width: 800px;">
       <%= f.label :commander %><br/>
       <%= f.text_field :commander %>
     </div>
