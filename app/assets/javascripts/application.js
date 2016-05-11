@@ -38,6 +38,13 @@ $(function () {
         return this.length > 0;
     };
 
+    if ($("#task_run_button").exists()) {
+        $("#task_run_button").click(function () {
+            showSendEmailPanel();
+        });
+    }
+
+
     if ($("#WebInspector").exists()) {
         // new FrameController().resizeIframeHeight();
         new WebInspector().toggle();
@@ -103,9 +110,11 @@ $(function () {
         menu.toggleClass("toggle");
     });
 
-    $('#exportButton').click(function () {
-        showSendEmailPanel();
-    });
+    if ($("#export_Button").exists()) {
+        $('#export_Button').click(function () {
+            showSendEmailPanel();
+        });
+    }
 });
 
 var showSendEmailPanel = function () {
