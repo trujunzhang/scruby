@@ -29,20 +29,20 @@
         <thead>
         <tr>
           <th>Title</th>
-          <th>Crawler</th>
+          <th>Crawler Name</th>
           <th>Commander</th>
           <th>Show</th>
         </tr>
         </thead>
 
-        <% @tasks.each do |crawler| %>
+        <% @tasks.each do |task| %>
             <tr>
 
-              <td><%= crawler.title %></td>
-              <td><%= crawler.crawler_id %></td>
-              <td><%= crawler.commander %></td>
+              <td><%= task.title %></td>
+              <td><%= Crawler.find(task.crawler_id).title %></td>
+              <td><%= task.commander %></td>
               <td>
-                <%= link_to 'Show', crawler %>
+                <%= link_to 'Show', task %>
               </td>
             </tr>
         <% end %>
