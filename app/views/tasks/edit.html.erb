@@ -1,6 +1,21 @@
-<h1>Editing task</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+<div class="row">
+  <div class="container form_panel">
+
+    <div class="panel panel-info form-bs">
+      <div class="panel-heading">
+        <h4>Editing task</h4>
+      </div>
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+      <%= link_to 'Show', @task %> |
+      <%= link_to 'Back', tasks_path %>
+    </div>
+
+  </div>
+</div>
+
+
+

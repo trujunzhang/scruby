@@ -1,13 +1,28 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
+
 class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    _all = Task.all
+    @tasks = _all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tasks }
+      format.json {
+        render :json => {
+            :jobs => @tasks,
+            :count => @count
+        }
+      }
     end
+
   end
 
   # GET /tasks/1
