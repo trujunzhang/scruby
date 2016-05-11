@@ -16,7 +16,11 @@
           <table class="table" style="padding: 0; margin: 0;">
             <tr>
               <td>Crawler name:</td>
-              <td><%= @crawler.crawler_name %></td>
+              <td>
+                <a href="/<%= @crawler.crawler_name %>">
+                  <input class="btn btn-info pull-right" type="button" value="<%= @crawler.crawler_name %>">
+                </a>
+              </td>
             </tr>
             <tr>
               <td>Domain:</td>
