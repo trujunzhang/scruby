@@ -47,11 +47,11 @@ $(function () {
                 },
                 url: "/application/run_task",
                 success: function (data) {
-                    $("#messagePanel").append('<div class="alert alert-success fade in"><button class="close" data-dismiss="alert">×</button><strong>Well done!</strong> You export to Excel successfully and sent the download url to your email</a>.</div>');
+                    $("#messagePanel").append('<div class="alert alert-success fade in"><button class="close" data-dismiss="alert">×</button><strong>Well done!</strong> Running the commander!</a>.</div>');
                     return false;
                 },
                 error: function (data) {
-                    $("#messagePanel").append('<div class="alert alert-danger fade in"><button class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> Export to Excel failed, you can export it again.</a>.</div>');
+                    $("#messagePanel").append('<div class="alert alert-danger fade in"><button class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> Run the commander failed, you can run it again.</a>.</div>');
                     return false;
                 }
             });
