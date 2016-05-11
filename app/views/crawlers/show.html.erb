@@ -3,7 +3,10 @@
 <div class="row">
   <div class="container form_panel">
     <div class="col-xs-12">
-      <div class="panel panel-default">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4>crawler detail</h4>
+        </div>
         <div class="panel-body">
           <div class="caption">
             <h3><%= @crawler.title %></h3>
@@ -12,12 +15,12 @@
         <div class="panel-body">
           <table class="table" style="padding: 0; margin: 0;">
             <tr>
-              <td>Crawler name</td>
-              <%= @crawler.crawler_name %>
+              <td>Crawler name:</td>
+              <td><%= @crawler.crawler_name %></td>
             </tr>
             <tr>
-              <td>Domain</td>
-              <%= @crawler.domain %>
+              <td>Domain:</td>
+              <td><%= @crawler.domain %></td>
             </tr>
           </table>
         </div>
