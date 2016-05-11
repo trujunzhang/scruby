@@ -20,7 +20,8 @@
                   <li class="course-icon-link web-track">
                     <a href="https://www.bloc.io/software-engineering-track"><i class="fa fa-tasks fa-fw"></i>
                       Software Engineering Track
-                    </a></li>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="tracks">
@@ -87,7 +88,7 @@
       <% end %>
 
       <% if user_signed_in? %>
-          <%= link_to "Hi "+current_user.name, edit_user_registration_path %>
+          <%= link_to "Hi "+current_user.name, current_user %>
       <% end %>
 
       <div class="divider">
