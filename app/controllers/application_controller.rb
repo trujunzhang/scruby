@@ -3,6 +3,10 @@ require 'excel_generator'
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def run_task
+
+  end
+
   def user_email
 
     @email= ""

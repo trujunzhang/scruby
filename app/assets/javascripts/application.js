@@ -40,7 +40,20 @@ $(function () {
 
     if ($("#task_run_button").exists()) {
         $("#task_run_button").click(function () {
-            showSendEmailPanel();
+            alert($("#task_commander").html());
+            // $.ajax({
+            //     type: "GET",
+            //     data: {
+            //         "commander": $("#task_commander").val()
+            //     },
+            //     url: "application/run_task",
+            //     success: function (data) {
+            //         return false;
+            //     },
+            //     error: function (data) {
+            //         return false;
+            //     }
+            // });
         });
     }
 
