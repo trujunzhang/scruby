@@ -6,6 +6,14 @@ class ApplicationController < ActionController::Base
   def run_task
     _commander = params[:commander]
     exec _commander
+
+    respond_to do |format|
+      format.json do
+        render json: {
+            result: "successful"
+        }.to_json
+      end
+    end
   end
 
   def user_email
