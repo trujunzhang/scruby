@@ -16,7 +16,7 @@ class Job
   field :status, type: String
 
 
-  def self.search_by_name(sub_string)
+  def self.search_by_title(sub_string)
     self.where(title: /#{sub_string}/i)
   end
 end

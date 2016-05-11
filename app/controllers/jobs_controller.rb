@@ -15,8 +15,7 @@ class JobsController < ApplicationController
 
     if params[:search]
       _search = params[:search]
-      _all=Job.search_by_name(_search)
-      _acount=_all.count
+      _all=Job.search_by_title(_search)
       _all=_all.order_by(:created_at => 'desc')
     else
       _all = Job.all.order_by(:created_at => 'desc')
