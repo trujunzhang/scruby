@@ -14,7 +14,7 @@
           <table class="table" style="padding: 0; margin: 0;">
             <tr>
               <td>Crawler name:</td>
-              <td><%= @crawler.name %></td>
+              <td><%= Crawler.find(@task.crawler_id).title %></td>
             </tr>
             <tr>
               <td>Commander:</td>
