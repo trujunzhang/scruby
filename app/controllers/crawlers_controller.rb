@@ -1,12 +1,26 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
+
 class CrawlersController < ApplicationController
   # GET /crawlers
   # GET /crawlers.json
   def index
-    @crawlers = Crawler.all
+    _all = Crawler.all
+    @crawlers = _all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @crawlers }
+      format.json {
+        render :json => {
+            :jobs => @crawlers,
+            :count => @count
+        }
+      }
     end
   end
 
