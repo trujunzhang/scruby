@@ -14,4 +14,9 @@ class Job
   field :enddate, type: String
   field :price, type: String
   field :status, type: String
+
+
+  def self.search_by_name(sub_string)
+    self.where(title: /#{sub_string}/i)
+  end
 end
