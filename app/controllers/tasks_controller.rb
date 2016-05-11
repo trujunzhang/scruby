@@ -29,11 +29,20 @@ class TasksController < ApplicationController
   # GET /tasks/1.json
   def show
     @task = Task.find(params[:id])
+    crawler_id = @task.crawler_id
+
+    @crawler = Crawler.find(crawler_id)
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @task }
+      format.html # index.html.erb
+      format.json {
+        render :json => {
+            :jobs => @task,
+            :crawler => @crawler
+        }
+      }
     end
+
   end
 
   # GET /tasks/new
