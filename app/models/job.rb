@@ -19,4 +19,11 @@ class Job
   def self.search_by_title(sub_string)
     self.where(title: /#{sub_string}/i)
   end
+
+  def self.search_by_from(from)
+    if from != "All"
+      self.where(from: /#{from}/)
+    end
+  end
+
 end
