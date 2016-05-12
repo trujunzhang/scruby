@@ -33,7 +33,7 @@
 
 //= require_tree .
 
-var bootstrapAlert = new BootstrapAlert();
+const bootstrapAlert = new BootstrapAlert();
 
 $(function () {
 
@@ -52,11 +52,11 @@ $(function () {
                 },
                 url: "/application/run_task",
                 success: function (data) {
-                    $("#messagePanel").append('<div class="alert alert-success fade in"><button class="close" data-dismiss="alert">×</button><strong>Well done!</strong> Running the commander!</a>.</div>');
+                    bootstrapAlert.message_for_task(true);
                     return false;
                 },
                 error: function (data) {
-                    $("#messagePanel").append('<div class="alert alert-danger fade in"><button class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> Run the commander failed, you can run it again.</a>.</div>');
+                    bootstrapAlert.message_for_task(false);
                     return false;
                 }
             });
@@ -152,15 +152,7 @@ var showSendEmailPanel = function () {
 };
 
 var appendEmailPanel = function (email) {
-    var html =
-        '<div class="send_email_panel fade in">' +
-        '<h1>INFORMATION</h1>' +
-        '<label>EMAIL:</label>' +
-        '<input class="form-control" id="send_form_email" placeholder="Email" type="email" autocomplete="off" value="' + email + '">' +
-        '<br>' +
-        '<input id="send_email_btn" class="btn btn-orange" data-loading-text="Exporting..." value="Send">' +
-        '</div>';
-
+    var html = bootstrapAlert.get_export_excel_panel_html(email);
     $("#email_panel").html(html);
 
     $('#send_email_btn').click(function () {
