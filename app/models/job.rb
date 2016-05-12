@@ -17,9 +17,11 @@ class Job
 
 
   def self.search(model)
+    _table = self
     if model.title
-      self.where(title: /#{model.title}/i)
+      _table  = _table.where(title: /#{model.title}/i)
     end
+    _table.where(from:/#{model.from}/)
   end
 
 
