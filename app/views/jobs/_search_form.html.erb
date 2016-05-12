@@ -1,6 +1,6 @@
 <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, @job.title, placeholder: "Search Jobs" %>
-    <span>From:</span>
+    <span style="margin-right: 12px;margin-left: 12px;">From:</span>
 
     <%= select_tag :from,
                  options_for_select([["Freelance", "freelance"], ["Upwork", "upwork"]],
