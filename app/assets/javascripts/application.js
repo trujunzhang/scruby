@@ -170,7 +170,7 @@ var export_to_excel = function ($btn) {
     var _email = $("#send_form_email").val();
     if (_email == "") {
         $btn.button('reset');
-        $("#messagePanel").append('<div class="alert alert-danger fade in"><button class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> Please type an email</a>?</div>');
+        bootstrapAlert.alert_email_for_export_excel(true);
         return;
     }
     $.ajax({
@@ -182,12 +182,12 @@ var export_to_excel = function ($btn) {
         },
         success: function (data) {
             $btn.button('reset');
-            $("#messagePanel").append('<div class="alert alert-success fade in"><button class="close" data-dismiss="alert">×</button><strong>Well done!</strong> You export to Excel successfully and sent the download url to your email</a>.</div>');
+            bootstrapAlert.message_for_export_excel(true);
             return false;
         },
         error: function (data) {
             $btn.button('reset');
-            $("#messagePanel").append('<div class="alert alert-danger fade in"><button class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> Export to Excel failed, you can export it again.</a>.</div>');
+            bootstrapAlert.message_for_export_excel(false);
             return false;
         }
     });
