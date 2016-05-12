@@ -9,11 +9,18 @@ class ProposalsController < ApplicationController
   # GET /proposals
   # GET /proposals.json
   def index
-    @proposals = Proposal.all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    _all = Proposal.all
+    @proposals = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @proposals }
+      format.json {
+        render :json => {
+            :jobs => @proposals,
+            :count => @count
+        }
+      }
     end
   end
 
