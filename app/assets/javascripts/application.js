@@ -26,6 +26,9 @@
 
 //= require selectorgadget/selectorgadget_combined
 
+//= require message/bootstrap_alert
+//= require message/scrapyd_json_parser
+
 //= require FrameController
 //= require WebInspector
 
