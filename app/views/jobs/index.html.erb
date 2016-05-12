@@ -7,7 +7,7 @@
       <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
           <span>From:</span>
-          <%= select :from, :from, [["Freelance", "freelance"], ["Upwork", "upwork"]] %>
+          <%= select :from, :from, [["All","all"],["Freelance", "freelance"], ["Upwork", "upwork"]] %>
           <%= submit_tag "Search", style:"margin-left:20px" %>
       <% end %>
     </div>

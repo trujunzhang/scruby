@@ -14,12 +14,10 @@ class JobsController < ApplicationController
     _all = Job.all
 
     if params[:search]
-      _search = params[:search]
-      _all=Job.search_by_title(_search)
-      _all=_all.order_by(:created_at => 'desc')
-    else
-      _all = Job.all.order_by(:created_at => 'desc')
+      _all=Job.search_by_title(params[:search])
     end
+
+    _all=_all.order_by(:created_at => 'desc')
 
     @jobs = _all.paginate(page: params[:page], per_page: 50)
     @count = _all.count
