@@ -27,17 +27,17 @@
 //= require selectorgadget/selectorgadget_combined
 
 //= require messages/bootstrap_alert
-//= require messages/scrapyd_json_parser
 
 //= require FrameController
 //= require WebInspector
 
 //= require_tree .
 
+var bootstrapAlert = new BootstrapAlert();
 
 $(function () {
 
-    var bootstrapAlert = new BootstrapAlert();
+    bootstrapAlert.setup();
 
     jQuery.fn.exists = function () {
         return this.length > 0;
