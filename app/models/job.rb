@@ -16,14 +16,11 @@ class Job
   field :status, type: String
 
 
-  def self.search_by_title(sub_string)
-    self.where(title: /#{sub_string}/i)
-  end
-
-  def self.search_by_from(from)
-    if from != "All"
-      self.where(from: /#{from}/)
+  def self.search(model)
+    if model.title
+      self.where(title: /#{model.title}/i)
     end
   end
+
 
 end

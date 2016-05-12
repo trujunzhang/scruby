@@ -10,22 +10,18 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
+
+    @job = Job.new
+    @job.title = params[:search]
+    @job.from = params[:from]
+
     _all = Job.all
-
-    # if params[:search]
-    #   _all=Job.search_by_title(params[:search])
-    # end
-
-    # _all=Job.search_by_from(_from)
+    _all=Job.search(@job)
 
     _all=_all.order_by(:created_at => 'desc')
 
     @jobs = _all.paginate(page: params[:page], per_page: 50)
     @count = _all.count
-
-    @job = Job.new
-    @job.title = params[:search]
-    @job.from = params[:from]
 
     respond_to do |format|
       format.html # index.html.erb
