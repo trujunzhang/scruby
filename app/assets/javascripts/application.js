@@ -26,8 +26,8 @@
 
 //= require selectorgadget/selectorgadget_combined
 
-//= require message/bootstrap_alert
-//= require message/scrapyd_json_parser
+//= require messages/bootstrap_alert
+//= require messages/scrapyd_json_parser
 
 //= require FrameController
 //= require WebInspector
@@ -36,6 +36,8 @@
 
 
 $(function () {
+
+    var bootstrapAlert = new BootstrapAlert();
 
     jQuery.fn.exists = function () {
         return this.length > 0;
