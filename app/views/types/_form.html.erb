@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :cat_id %><br />
-    <%= f.select(:cat_id, Category.all.map { |lc| [lc.title, lc._id] }) %>
+    <%= f.select(:cat_id, Cat.all.map { |lc| [lc.title, lc._id] }) %>
   </div>
   <div class="field">
     <%= f.label :title %><br />

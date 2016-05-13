@@ -5,8 +5,8 @@
     <div class="row">
       <nav>
         <ul class="pager">
-          <li class="previous"> <%= link_to 'Back', categories_path %></li>
-          <li class="next"><%= link_to 'Edit', edit_category_path(@category)%></li>
+          <li class="previous"> <%= link_to 'Back', cats_path %></li>
+          <li class="next"><%= link_to 'Edit', edit_cat_path(@cat)%></li>
         </ul>
       </nav>
     </div>
@@ -14,14 +14,14 @@
     <div class="panel panel-success">
 
       <div class="panel-heading">
-        <h4><%= @category.title %></h4>
+        <h4><%= @cat.title %></h4>
       </div>
 
       <div class="panel-body">
         <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
           <b class="pull-left">Description:</b>
           </br>
-          <%=raw @category.description %>
+          <%=raw @cat.description %>
         </div>
       </div>
 

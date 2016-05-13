@@ -3,7 +3,7 @@
   <div class="row">
     <nav>
       <ul class="pager">
-        <li class="previous"> <%= link_to 'New Category', new_category_path %></li>
+        <li class="previous"> <%= link_to 'New Category', new_cat_path %></li>
         <li class="next"><h3 style="float: right;">Count: <span><%= @count %></span></h3></li>
       </ul>
     </nav>
@@ -22,7 +22,7 @@
           <th>Show</th>
         </tr>
 
-        <% @categories.each do |category| %>
+        <% @cats.each do |category| %>
             <tr>
               <td><%= category.title %></td>
               <td><%= raw category.description %></td>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="pagination">
-    <%= will_paginate @jobs, :renderer => BootstrapPagination::Rails %>
+    <%= will_paginate @cats, :renderer => BootstrapPagination::Rails %>
   </div>
 
 

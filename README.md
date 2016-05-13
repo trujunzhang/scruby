@@ -20,7 +20,7 @@ rails generate scaffold crawler title crawler_name domain
 rails generate scaffold task title crawler_id commander
 rails generate scaffold scheduler title crawler_id task_id commander
 
-rails generate scaffold category title description
+rails generate scaffold Cat title description
 rails generate scaffold type cat_id title key value description 
 
     
