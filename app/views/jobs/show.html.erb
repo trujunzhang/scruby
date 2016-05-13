@@ -32,32 +32,32 @@
         <input class="btn btn-info pull-right" type="button" value="Project Info">
         </a>
       </div>
-      <table class="table" style="padding: 0; margin: 0;">
-        <tr>
-          <td>Price</td>
-          <td><%= @job.price %></td>
-        </tr>
-        <tr>
-          <td>Customer</td>
-          <td><%= @job.customer %></td>
-        </tr>
-        <tr>
-          <td>Start Date</td>
-          <td><%= @job.startdate %></td>
-        </tr>
-        <tr>
-          <td>End Date</td>
-          <td><%= @job.enddate %></td>
-        </tr>
-      </table>
+      <div class="panel-body">
+        <table class="table" style="padding: 0; margin: 0;">
+          <tr>
+            <td>Price:</td>
+            <td><%= @job.price %></td>
+          </tr>
+          <tr>
+            <td>Customer:</td>
+            <td><%= @job.customer %></td>
+          </tr>
+          <tr>
+            <td>Start Date:</td>
+            <td><%= @job.startdate %></td>
+          </tr>
+          <tr>
+            <td>End Date:</td>
+            <td><%= @job.enddate %></td>
+          </tr>
+        </table>
+      </div>
       <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
         <b class="pull-left">Description:</b>
         </br>
           <%=raw @job.description %>
       </div>
-      <div class="panel-body">
 
-      </div>
     </div>
   </div>
   </div>
