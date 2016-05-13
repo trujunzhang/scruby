@@ -54,9 +54,7 @@
 
     <div class="field">
       <%= f.label :from %><br/>
-      <%= f.select :from,
-                   options_for_select([["Freelance", "freelance"], ["Upwork", "upwork"]],
-                                      @job.from) %>
+      <%= f.select :from, options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.key, lc.value] }, @job.from) %>
     </div>
     <div class="field">
       <%= f.label :jobtype %><br/>
@@ -67,7 +65,7 @@
     <div class="field">
       <%= f.label :status %><br/>
       <%= f.select :status,
-                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"],["Declined","declined"]],
+                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"], ["Declined", "declined"]],
                                       @job.status) %>
     </div>
     </br>
