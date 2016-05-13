@@ -1,12 +1,14 @@
 <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, @job.title, placeholder: "Search Jobs" %>
-    <span style="margin-right: 12px;margin-left: 12px;">From:</span>
 
+    <span style="margin-right: 12px;margin-left: 12px;">From:</span>
     <%= select_tag :from ,options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.value, lc.key] },@job.from) %>
 
     <span style="margin-right: 12px;margin-left: 12px;">Job Type:</span>
-
     <%= select_tag :jobtype ,options_for_select(Type.find_by_cat_title("Jobtype").map { |lc| [lc.value, lc.key] },@job.jobtype) %>
+
+    <span style="margin-right: 12px;margin-left: 12px;">Job Status:</span>
+    <%= select_tag :status ,options_for_select(Type.find_by_cat_title("Jobstatus").map { |lc| [lc.value, lc.key] },@job.status) %>
 
     <%= submit_tag "Search", style:"margin-left:20px" %>
 <% end %>

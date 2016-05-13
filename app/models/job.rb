@@ -23,6 +23,7 @@ class Job
     end
     _table=_table.where(from: /#{model.from}/i)
     _table= _table.where(jobtype: /#{model.jobtype}/i)
+    _table= _table.where(status: /#{model.status}/i)
   end
 
 
