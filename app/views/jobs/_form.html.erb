@@ -58,13 +58,11 @@
     </div>
     <div class="field">
       <%= f.label :jobtype %><br/>
-      <%= f.select :jobtype,options_for_select(Type.find_by_cat_title("Jobtype").map { |lc| [lc.value, lc.key] },@job.jobtype) %>
+      <%= f.select :jobtype, options_for_select(Type.find_by_cat_title("Jobtype").map { |lc| [lc.value, lc.key] }, @job.jobtype) %>
     </div>
     <div class="field">
       <%= f.label :status %><br/>
-      <%= f.select :status,
-                   options_for_select([["Proposal", "proposal"], ["Interviewing", "interviewing"], ["Progress", "progress"], ["Reviews", "reviews"], ["Declined", "declined"]],
-                                      @job.status) %>
+      <%= f.select :status, options_for_select(Type.find_by_cat_title("Jobstatus").map { |lc| [lc.value, lc.key] }, @job.status) %>
     </div>
     </br>
     <div class="actions">
