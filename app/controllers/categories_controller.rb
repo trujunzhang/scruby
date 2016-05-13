@@ -2,11 +2,18 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    _all = Category.all
+     @categories = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @categories }
+      format.json {
+        render :json => {
+            :jobs => @categories,
+            :count => @count
+        }
+      }
     end
   end
 
