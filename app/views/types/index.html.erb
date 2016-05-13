@@ -31,7 +31,7 @@
               <td><%= type.key %></td>
               <td><%= type.value %></td>
               <td><%= type.description %></td>
-              <td><%= type.cat_id %></td>
+              <td><%= Category.find(type.cat_id).title %></td>
               <td><%= link_to 'Show', type %></td>
             </tr>
         <% end %>
