@@ -42,7 +42,8 @@ class JobsController < ApplicationController
         render :json => {
             :jobs => @jobs,
             :count => @count,
-            :search => @job
+            :search => @job,
+            :from => @From
         }
       }
     end
