@@ -2,6 +2,16 @@
 
 <div class="row">
   <div class="container form_panel">
+
+    <div class="row">
+      <nav>
+        <ul class="pager">
+          <li class="previous"> <%= link_to 'Back', jobs_path %></li>
+          <li class="next"><%= link_to 'Edit', edit_job_path(@job)%></li>
+        </ul>
+      </nav>
+    </div>
+
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -46,8 +56,7 @@
           <%=raw @job.description %>
       </div>
       <div class="panel-body">
-        <%= link_to 'Back', jobs_path, class:"btn btn-primary pull-left",type:"button" %>
-        <%= link_to 'Edit', edit_job_path(@job), class:"btn btn-success pull-right",type:"button" %>
+
       </div>
     </div>
   </div>
