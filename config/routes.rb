@@ -1,6 +1,12 @@
 Scruby::Application.routes.draw do
 
 
+  resources :types
+
+
+  resources :categories
+
+
   resources :tasks
 
 

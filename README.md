@@ -21,7 +21,7 @@ rails generate scaffold task title crawler_id commander
 rails generate scaffold scheduler title crawler_id task_id commander
 
 rails generate scaffold category title description
-rails generate scaffold type title attrib value
+rails generate scaffold type cat_id title key value description 
 
     
 ## Task
