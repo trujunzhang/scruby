@@ -1,5 +1,6 @@
 class Dealsdirect
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :updateAt, type: String
 

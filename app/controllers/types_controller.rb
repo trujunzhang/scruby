@@ -2,11 +2,18 @@ class TypesController < ApplicationController
   # GET /types
   # GET /types.json
   def index
-    @types = Type.all
+    _all = Type.all
+    @types = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @types }
+      format.json {
+        render :json => {
+            :jobs => @types,
+            :count => @count
+        }
+      }
     end
   end
 

@@ -1,6 +1,28 @@
-<h1>Editing type</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="container form_panel">
 
-<%= link_to 'Show', @type %> |
-<%= link_to 'Back', types_path %>
+    <div class="row">
+      <nav>
+        <ul class="pager">
+          <li class="previous"> <%= link_to 'Show', @type %></li>
+          <li class="next"><%= link_to 'Back', types_path %></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="panel panel-info form-bs">
+      <div class="panel-heading">
+        <h4>Editing type</h4>
+      </div>
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+

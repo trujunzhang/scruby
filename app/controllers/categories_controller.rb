@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     _all = Category.all
-     @categories = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @categories = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
     @count = _all.count
 
     respond_to do |format|
