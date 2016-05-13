@@ -14,6 +14,7 @@ class JobsController < ApplicationController
     @job = Job.new
     @job.title = params[:search]
     @job.from = params[:from]
+    @job.jobtype = params[:jobtype]
 
     _all = Job.all
     _all=Job.search(@job)

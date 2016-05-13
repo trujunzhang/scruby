@@ -4,5 +4,9 @@
 
     <%= select_tag :from ,options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.value, lc.key] },@job.from) %>
 
+    <span style="margin-right: 12px;margin-left: 12px;">Job Type:</span>
+
+    <%= select_tag :jobtype ,options_for_select(Type.find_by_cat_title("Jobtype").map { |lc| [lc.value, lc.key] },@job.jobtype) %>
+
     <%= submit_tag "Search", style:"margin-left:20px" %>
 <% end %>
