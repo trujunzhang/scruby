@@ -54,7 +54,7 @@
 
     <div class="field">
       <%= f.label :from %><br/>
-      <%= f.select :from, options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.key, lc.value] }, @job.from) %>
+      <%= f.select :from, options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.value, lc.key] }, @job.from) %>
     </div>
     <div class="field">
       <%= f.label :jobtype %><br/>
