@@ -21,7 +21,7 @@ class Job
     if model.title
       _table  = _table.where(title: /#{model.title}/i)
     end
-    _table.where(from:/#{model.from}/)
+    _table.where(from:/#{model.from}/i)
   end
 
 
