@@ -11,13 +11,6 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
 
-
-    # <%= select_tag :from,
-    #                options_for_select(Type.find_by_cat_id(Category.find_by_title("From")._id),
-    #                                   @job.from) %>
-
-    @From=Type.find_by_cat_title("From")
-
     @job = Job.new
     @job.title = params[:search]
     @job.from = params[:from]
@@ -37,8 +30,7 @@ class JobsController < ApplicationController
         render :json => {
             :jobs => @jobs,
             :count => @count,
-            :search => @job,
-            :from => @From
+            :search => @job
         }
       }
     end
