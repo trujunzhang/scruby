@@ -19,12 +19,16 @@
       <div class="panel-body">
         <table class="table" style="padding: 0; margin: 0;">
           <tr>
-            <td>Key</td>
+            <td>Key:</td>
             <td><%= @type.key %></td>
           </tr>
           <tr>
-            <td>Value</td>
+            <td>Value:</td>
             <td><%= @type.value %></td>
+          </tr>
+          <tr>
+            <td>Category:</td>
+            <td><%= Category.find(@type.cat_id).title %></td>
           </tr>
         </table>
         <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
