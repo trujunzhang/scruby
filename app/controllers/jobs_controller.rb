@@ -17,6 +17,7 @@ class JobsController < ApplicationController
     #                                   @job.from) %>
 
     @From = []
+
     _cats = Cat.find_by_title("From")
     if _cats.count == 1
       @From=Type.find_by_cat_id(_cats[0]._id)
