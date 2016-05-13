@@ -2,7 +2,7 @@
     <%= text_field_tag :search, @job.title, placeholder: "Search Jobs" %>
     <span style="margin-right: 12px;margin-left: 12px;">From:</span>
 
-    <%= select_tag :from ,options_for_select(@From.map { |lc| [lc.key, lc.value] },@job.from) %>
+    <%= select_tag :from ,options_for_select(Type.find_by_cat_title("From").map { |lc| [lc.key, lc.value] },@job.from) %>
 
     <%= submit_tag "Search", style:"margin-left:20px" %>
 <% end %>

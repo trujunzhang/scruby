@@ -6,6 +6,6 @@ class Cat
   field :description, type: String
 
   def self.find_by_title(_title)
-    self.where(title: /#{_title}/i)
+    self.find_by({title: /#{_title}/i})
   end
 end
