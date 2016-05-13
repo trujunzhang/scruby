@@ -25,7 +25,7 @@
       <% if @jobs.present? %>
           <%= render 'jobs_table' %>
       <% else %>
-          <p>There are no jobs containing the term(s) <%= params[:search] %>.</p>
+          <p>There are no jobs containing the term(s) <%= @job.title %>.</p>
       <% end %>
 
     </div>
