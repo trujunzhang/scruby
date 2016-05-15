@@ -35,9 +35,7 @@
         <th>Property type</th>
         <th>Land size</th>
         <th>Built in</th>
-        <th>Info name</th>
-        <th>Info phone</th>
-        <th>Info email</th>
+        <th>Info</th>
         <th>Description</th>
       </tr>
       </thead>
@@ -57,12 +55,15 @@
             <td><%= realtor.property_type %></td>
             <td><%= realtor.land_size %></td>
             <td><%= realtor.built_in %></td>
-            <td><%= realtor.Info_name %></td>
-            <td><%= realtor.Info_phone %></td>
-            <td><%= realtor.Info_email %></td>
+            <td>
+              <h1>Name:</h1>
+              <%= realtor.Info_name %>
+              <h1>Phone:</h1>
+              <%= realtor.Info_phone %>
+              <h1>Email:</h1>
+              <%= realtor.Info_email %>
+            </td>
             <td><%= realtor.description %></td>
-
-
           </tr>
       <% end %>
     </table>
