@@ -2,6 +2,16 @@
 
 <div class="row">
   <div class="container form_panel">
+
+    <div class="row">
+      <nav>
+        <ul class="pager">
+          <li class="previous"> <%= link_to 'Back', vpns_path %></li>
+          <li class="next"><%= link_to 'Edit', edit_vpn_path(@vpn)%></li>
+        </ul>
+      </nav>
+    </div>
+
     <div class="col-xs-12">
       <div class="panel panel-default">
         <div class="panel-body">
@@ -16,11 +26,7 @@
             </tr>
           </table>
         </div>
-       
-        <div class="panel-body">
-          <%= link_to 'Back', vpns_path, class:"btn btn-primary pull-left",type:"button" %>
-          <%= link_to 'Edit', edit_vpn_path(@vpn), class:"btn btn-success pull-right",type:"button" %>
-        </div>
+
       </div>
     </div>
   </div>
