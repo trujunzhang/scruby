@@ -73,6 +73,8 @@ class ApplicationController < ActionController::Base
       Itune.all
     elsif type == "dealsdirects"
       Dealsdirect.all
+    elsif type == "realtors"
+      Realtor.all
     end
   end
 
@@ -84,6 +86,8 @@ class ApplicationController < ActionController::Base
       Itune.count
     elsif type == "dealsdirects"
       Dealsdirect.count
+    elsif type == "realtors"
+      Realtor.count
     end
   end
 
@@ -95,6 +99,8 @@ class ApplicationController < ActionController::Base
       ItunesGenerator.new("itunes")
     elsif type == "dealsdirects"
       DealsDirectsGenerator.new("dealsdirects")
+    elsif type == "realtors"
+      RealtorsGenerator.new("realtors")
     end
   end
 
