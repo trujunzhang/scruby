@@ -7,7 +7,7 @@ class RealtorsGenerator < BaseGenerator
     wb.styles do |s|
       head = s.add_style :bg_color => "FF", :fg_color => "00"
       percent = s.add_style :num_fmt => 9
-      wb.add_worksheet(:name => "DealsDirect's products") do |sheet|
+      wb.add_worksheet(:name => "Realtor's products") do |sheet|
         # Note: you must add rows to the document *BEFORE* applying column styles to them
         sheet.add_row ['images', 'address', 'price', 'listing_id', 'property_type', 'land_size', 'built_in', 'Info_name', 'Info_phone','Info_email','description']
 
