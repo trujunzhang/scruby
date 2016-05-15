@@ -1,0 +1,47 @@
+<h1>Listing realtors</h1>
+
+<table>
+  <tr>
+    <th>Href</th>
+    <th>Guid</th>
+    <th>Images</th>
+    <th>Address</th>
+    <th>Price</th>
+    <th>Listing</th>
+    <th>Property type</th>
+    <th>Land size</th>
+    <th>Built in</th>
+    <th>Info name</th>
+    <th>Info phone</th>
+    <th>Info email</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @realtors.each do |realtor| %>
+  <tr>
+    <td><%= realtor.href %></td>
+    <td><%= realtor.guid %></td>
+    <td><%= realtor.images %></td>
+    <td><%= realtor.address %></td>
+    <td><%= realtor.price %></td>
+    <td><%= realtor.listing_id %></td>
+    <td><%= realtor.property_type %></td>
+    <td><%= realtor.land_size %></td>
+    <td><%= realtor.built_in %></td>
+    <td><%= realtor.Info_name %></td>
+    <td><%= realtor.Info_phone %></td>
+    <td><%= realtor.Info_email %></td>
+    <td><%= realtor.description %></td>
+    <td><%= link_to 'Show', realtor %></td>
+    <td><%= link_to 'Edit', edit_realtor_path(realtor) %></td>
+    <td><%= link_to 'Destroy', realtor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Realtor', new_realtor_path %>

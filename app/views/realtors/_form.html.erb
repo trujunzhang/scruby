@@ -1,0 +1,69 @@
+<%= form_for(@realtor) do |f| %>
+  <% if @realtor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@realtor.errors.count, "error") %> prohibited this realtor from being saved:</h2>
+
+      <ul>
+      <% @realtor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :href %><br />
+    <%= f.text_field :href %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br />
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :images %><br />
+    <%= f.text_field :images %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_id %><br />
+    <%= f.text_field :listing_id %>
+  </div>
+  <div class="field">
+    <%= f.label :property_type %><br />
+    <%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+    <%= f.label :land_size %><br />
+    <%= f.text_field :land_size %>
+  </div>
+  <div class="field">
+    <%= f.label :built_in %><br />
+    <%= f.text_field :built_in %>
+  </div>
+  <div class="field">
+    <%= f.label :Info_name %><br />
+    <%= f.text_field :Info_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Info_phone %><br />
+    <%= f.text_field :Info_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Info_email %><br />
+    <%= f.text_field :Info_email %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
