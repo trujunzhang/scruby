@@ -1,12 +1,26 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
 class RealtorsController < ApplicationController
   # GET /realtors
   # GET /realtors.json
   def index
-    @realtors = Realtor.all
+    _all = Realtor.all
+    @realtors = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @realtors }
+
+      format.json {
+        render :json => {
+            :jobs => @realtors,
+            :count => @count
+        }
+      }
     end
   end
 

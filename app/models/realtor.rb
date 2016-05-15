@@ -2,7 +2,7 @@ class Realtor
   include Mongoid::Document
   field :href, type: String
   field :guid, type: String
-  field :images, type: String
+  field :images, type: List
   field :address, type: String
   field :price, type: String
   field :listing_id, type: String
