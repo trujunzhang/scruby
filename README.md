@@ -23,6 +23,7 @@ rails generate scaffold scheduler title crawler_id task_id commander
 rails generate scaffold Cat title description
 rails generate scaffold type cat_id title key value description 
 
+rails generate scaffold realtor href guid images address price listing_id property_type land_size built_in Info_name Info_phone Info_email description            
     
 ## Task
 rails g task vpns auto_connection
