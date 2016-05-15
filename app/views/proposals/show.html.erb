@@ -1,25 +1,30 @@
-
-
 <div class="row">
   <div class="container form_panel">
 
-      <div class="panel panel-success">
+    <div class="row">
+      <nav>
+        <ul class="pager">
+          <li class="previous"> <%= link_to 'Back', proposals_path %></li>
+          <li class="next"><%= link_to 'Edit', edit_proposal_path(@proposal) %></li>
+        </ul>
+      </nav>
+    </div>
 
-        <div class="panel-heading">
-          <h4><%= @proposal.title %></h4>
-        </div>
+    <div class="panel panel-success">
 
-        <div class="panel-body">
-          <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
-            <b class="pull-left">Content:</b>
-            </br>
-            <%=raw @proposal.content %>
-          </div>
-        </div>
-
-        <%= link_to 'Back', proposals_path, class:"btn btn-primary pull-left",type:"button" %>
-        <%= link_to 'Edit', edit_proposal_path(@proposal), class:"btn btn-success pull-right",type:"button" %>
+      <div class="panel-heading">
+        <h4><%= @proposal.title %></h4>
       </div>
+
+      <div class="panel-body">
+        <div style="padding-left: 12px;padding-top: 8px;padding-right: 4px;">
+          <b class="pull-left">Content:</b>
+          </br>
+          <%= raw @proposal.content %>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
