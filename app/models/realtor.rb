@@ -1,8 +1,10 @@
 class Realtor
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :href, type: String
   field :guid, type: String
-  field :images, type: List
+  field :images, type: Array
   field :address, type: String
   field :price, type: String
   field :listing_id, type: String
