@@ -46,6 +46,25 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def export_to_cvs
+    _type = params[:type]
+    _email = params[:email]
+
+    _row = get_Rows(_type)
+    _generator = get_Generator(_type)
+    _item_size = (_row.size)
+
+    ExportUtils.new(_generator).generate_xls(_row.order_by(:updatedAt => 'desc')).export_and_notifier_email(_email, request.base_url, _item_size)
+
+    respond_to do |format|
+      format.json do
+        render json: {
+            result: "successful"
+        }.to_json
+      end
+    end
+  end
+
   def export_to_excel
     _type = params[:type]
     _email = params[:email]

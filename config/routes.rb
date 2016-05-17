@@ -47,6 +47,7 @@ Scruby::Application.routes.draw do
       get 'user_email'
       get 'crawled_count'
       post 'export_to_excel'
+      post 'export_to_cvs'
       get 'run_task'
     end
   end
