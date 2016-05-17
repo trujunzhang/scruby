@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
     _generator = get_Generator(_type)
     _item_size = (_row.size)
 
-    ExportUtils.new(_generator).generate_xls(_row.order_by(:updatedAt => 'desc')).export_and_notifier_email(_email, request.base_url, _item_size)
+    ExcelUtils.new(_generator).generate_xls(_row.order_by(:updatedAt => 'desc')).export_and_notifier_email(_email, request.base_url, _item_size)
 
     respond_to do |format|
       format.json do
@@ -73,7 +73,7 @@ class ApplicationController < ActionController::Base
     _generator = get_Generator(_type)
     _item_size = (_row.size)
 
-    ExportUtils.new(_generator).generate_xls(_row.order_by(:updatedAt => 'desc')).export_and_notifier_email(_email, request.base_url, _item_size)
+    ExcelUtils.new(_generator).generate_xls(_row.order_by(:updatedAt => 'desc')).export_and_notifier_email(_email, request.base_url, _item_size)
 
     respond_to do |format|
       format.json do

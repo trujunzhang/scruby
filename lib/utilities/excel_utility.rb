@@ -1,7 +1,7 @@
 require 'axlsx'
 
 
-class ExportUtils
+class ExcelUtils
 
   def initialize(generator)
     @generator = generator
