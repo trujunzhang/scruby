@@ -94,6 +94,8 @@ class ApplicationController < ActionController::Base
       Dealsdirect.all
     elsif type == "realtors"
       Realtor.all
+    elsif type == "aliexpresss"
+      Aliexpress.all
     end
   end
 
@@ -107,6 +109,8 @@ class ApplicationController < ActionController::Base
       Dealsdirect.count
     elsif type == "realtors"
       Realtor.count
+    elsif type == "aliexpresss"
+      Aliexpress.all
     end
   end
 
@@ -120,6 +124,8 @@ class ApplicationController < ActionController::Base
       DealsDirectsGenerator.new("dealsdirects")
     elsif type == "realtors"
       RealtorsGenerator.new("realtors")
+    elsif type == "aliexpresss"
+      AliexpresssGenerator.new("aliexpress")
     end
   end
 
