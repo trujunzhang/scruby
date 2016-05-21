@@ -2,11 +2,18 @@ class AliexpressesController < ApplicationController
   # GET /aliexpresses
   # GET /aliexpresses.json
   def index
-    @aliexpresses = Aliexpress.all
+    _all = Aliexpress.all
+    @aliexpresses = _all.order_by(:updatedAt => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @aliexpresses }
+      format.json {
+        render :json => {
+            :jobs => @aliexpresses,
+            :count => @count
+        }
+      }
     end
   end
 

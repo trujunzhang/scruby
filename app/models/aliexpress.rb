@@ -1,5 +1,7 @@
 class Aliexpress
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :title, type: String
   field :thumbnail, type: String
   field :seller, type: String
