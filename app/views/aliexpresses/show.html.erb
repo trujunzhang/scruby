@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @aliexpress.title %>
+</p>
+
+<p>
+  <b>Thumbnail:</b>
+  <%= @aliexpress.thumbnail %>
+</p>
+
+<p>
+  <b>Seller:</b>
+  <%= @aliexpress.seller %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @aliexpress.price %>
+</p>
+
+<p>
+  <b>Original price:</b>
+  <%= @aliexpress.original_price %>
+</p>
+
+<p>
+  <b>Shipping:</b>
+  <%= @aliexpress.shipping %>
+</p>
+
+<p>
+  <b>Ship from:</b>
+  <%= @aliexpress.ship_from %>
+</p>
+
+<p>
+  <b>Delivery time:</b>
+  <%= @aliexpress.delivery_time %>
+</p>
+
+<p>
+  <b>Rate num:</b>
+  <%= @aliexpress.rate_num %>
+</p>
+
+<p>
+  <b>Total orders:</b>
+  <%= @aliexpress.total_orders %>
+</p>
+
+
+<%= link_to 'Edit', edit_aliexpress_path(@aliexpress) %> |
+<%= link_to 'Back', aliexpresses_path %>

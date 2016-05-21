@@ -1,0 +1,41 @@
+<h1>Listing aliexpresses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Thumbnail</th>
+    <th>Seller</th>
+    <th>Price</th>
+    <th>Original price</th>
+    <th>Shipping</th>
+    <th>Ship from</th>
+    <th>Delivery time</th>
+    <th>Rate num</th>
+    <th>Total orders</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aliexpresses.each do |aliexpress| %>
+  <tr>
+    <td><%= aliexpress.title %></td>
+    <td><%= aliexpress.thumbnail %></td>
+    <td><%= aliexpress.seller %></td>
+    <td><%= aliexpress.price %></td>
+    <td><%= aliexpress.original_price %></td>
+    <td><%= aliexpress.shipping %></td>
+    <td><%= aliexpress.ship_from %></td>
+    <td><%= aliexpress.delivery_time %></td>
+    <td><%= aliexpress.rate_num %></td>
+    <td><%= aliexpress.total_orders %></td>
+    <td><%= link_to 'Show', aliexpress %></td>
+    <td><%= link_to 'Edit', edit_aliexpress_path(aliexpress) %></td>
+    <td><%= link_to 'Destroy', aliexpress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aliexpress', new_aliexpress_path %>

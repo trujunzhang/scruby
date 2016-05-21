@@ -1,0 +1,57 @@
+<%= form_for(@aliexpress) do |f| %>
+  <% if @aliexpress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aliexpress.errors.count, "error") %> prohibited this aliexpress from being saved:</h2>
+
+      <ul>
+      <% @aliexpress.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail %><br />
+    <%= f.text_field :thumbnail %>
+  </div>
+  <div class="field">
+    <%= f.label :seller %><br />
+    <%= f.text_field :seller %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :original_price %><br />
+    <%= f.text_field :original_price %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping %><br />
+    <%= f.text_field :shipping %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_from %><br />
+    <%= f.text_field :ship_from %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_time %><br />
+    <%= f.text_field :delivery_time %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_num %><br />
+    <%= f.text_field :rate_num %>
+  </div>
+  <div class="field">
+    <%= f.label :total_orders %><br />
+    <%= f.text_field :total_orders %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
