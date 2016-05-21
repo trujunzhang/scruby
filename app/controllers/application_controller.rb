@@ -110,7 +110,7 @@ class ApplicationController < ActionController::Base
     elsif type == "realtors"
       Realtor.count
     elsif type == "aliexpresss"
-      Aliexpress.all
+      Aliexpress.count
     end
   end
 
