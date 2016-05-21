@@ -1,3 +1,10 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
+
+
 class AliexpressesController < ApplicationController
   # GET /aliexpresses
   # GET /aliexpresses.json
