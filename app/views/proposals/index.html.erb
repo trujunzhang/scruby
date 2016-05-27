@@ -19,14 +19,16 @@
         <tr>
           <th>Title</th>
           <th>Content</th>
-          <th>Show</th>
         </tr>
 
         <% @proposals.each do |proposal| %>
             <tr>
-              <td><%= proposal.title %></td>
+              <td>
+                <%= link_to 'Show', proposal do %>
+                    <%= proposal.title %>
+                <% end %>
+              </td>
               <td><%= raw proposal.content %></td>
-              <td><%= link_to 'Show', proposal %></td>
             </tr>
         <% end %>
       </table>
