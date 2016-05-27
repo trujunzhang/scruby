@@ -24,11 +24,15 @@
         <% @proposals.each do |proposal| %>
             <tr>
               <td>
-                <%= link_to 'Show', proposal do %>
-                    <%= proposal.title %>
+                <%= link_to proposal do %>
+                    <h6><%= proposal.title %></h6>
                 <% end %>
               </td>
-              <td><%= raw proposal.content %></td>
+              <td>
+                <div class="table-description">
+                  <%= raw proposal.content %>
+                </div>
+              </td>
             </tr>
         <% end %>
       </table>
