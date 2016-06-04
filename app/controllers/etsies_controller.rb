@@ -1,12 +1,25 @@
+require 'will_paginate/array'
+
+require 'active_support'
+require 'active_support/core_ext'
+
 class EtsiesController < ApplicationController
   # GET /etsies
   # GET /etsies.json
   def index
-    @etsies = Etsy.all
+    _all = Etsy.all
+    @etsies = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
+    @count = _all.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @etsies }
+
+      format.json {
+        render :json => {
+            :jobs => @etsies,
+            :count => @count
+        }
+      }
     end
   end
 

@@ -96,6 +96,8 @@ class ApplicationController < ActionController::Base
       Realtor.all
     elsif type == "aliexpresss"
       Aliexpress.all
+    elsif type == "Etsys"
+      Etsy.all
     end
   end
 
@@ -111,6 +113,8 @@ class ApplicationController < ActionController::Base
       Realtor.count
     elsif type == "aliexpresss"
       Aliexpress.count
+    elsif type == "Etsys"
+      Etsy.count
     end
   end
 
@@ -126,6 +130,8 @@ class ApplicationController < ActionController::Base
       RealtorsGenerator.new("realtors")
     elsif type == "aliexpresss"
       AliexpresssGenerator.new("aliexpress")
+    elsif type == "Etsys"
+      EtsysGenerator.new("Etsys")
     end
   end
 
