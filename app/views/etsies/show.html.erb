@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @etsy.title %>
+</p>
+
+<p>
+  <b>Currencyvalue:</b>
+  <%= @etsy.currencyValue %>
+</p>
+
+<p>
+  <b>Reviews:</b>
+  <%= @etsy.reviews %>
+</p>
+
+<p>
+  <b>Favorites:</b>
+  <%= @etsy.favorites %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @etsy.description %>
+</p>
+
+<p>
+  <b>Images:</b>
+  <%= @etsy.images %>
+</p>
+
+
+<%= link_to 'Edit', edit_etsy_path(@etsy) %> |
+<%= link_to 'Back', etsies_path %>

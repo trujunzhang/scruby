@@ -1,0 +1,41 @@
+<%= form_for(@etsy) do |f| %>
+  <% if @etsy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@etsy.errors.count, "error") %> prohibited this etsy from being saved:</h2>
+
+      <ul>
+      <% @etsy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :currencyValue %><br />
+    <%= f.text_field :currencyValue %>
+  </div>
+  <div class="field">
+    <%= f.label :reviews %><br />
+    <%= f.text_field :reviews %>
+  </div>
+  <div class="field">
+    <%= f.label :favorites %><br />
+    <%= f.text_field :favorites %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :images %><br />
+    <%= f.text_field :images %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
