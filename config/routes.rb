@@ -2,25 +2,12 @@ Scruby::Application.routes.draw do
 
 
   resources :etsies
-
-
   resources :aliexpresses
-
-
   resources :realtors
-
-
   resources :types
-
-
   resources :cats
-
-
   resources :tasks
-
-
   resources :crawlers
-
 
   resources :dealsdirects
   resources :dealsdirectnavbars
