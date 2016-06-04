@@ -1,3 +1,28 @@
 // Place all the styles related to the etsies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#catListings {
+
+  .item {
+    border-bottom: 4px solid #E5E5E5;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    .imgWrap {
+      float: left;
+      margin-right: 20px;
+      width: 320px;
+      position: relative;
+      border: 1px solid #DDDDDD;
+    }
+  }
+
+}
+
+#catListings .item .imgWrap img {
+  background: url(../assets/60.png);
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
