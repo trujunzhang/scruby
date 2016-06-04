@@ -1,33 +1,69 @@
-<h1>Listing etsies</h1>
+<div class='container' id="showcases" data-ctrl="etsys">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Currencyvalue</th>
-    <th>Reviews</th>
-    <th>Favorites</th>
-    <th>Description</th>
-    <th>Images</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="row cases-export-panel">
+    <div class="col-md-8">
+      <h1>Crawling <b>ZendiazSilverwork</b></h1>
 
-<% @etsies.each do |etsy| %>
-  <tr>
-    <td><%= etsy.title %></td>
-    <td><%= etsy.currencyValue %></td>
-    <td><%= etsy.reviews %></td>
-    <td><%= etsy.favorites %></td>
-    <td><%= etsy.description %></td>
-    <td><%= etsy.images %></td>
-    <td><%= link_to 'Show', etsy %></td>
-    <td><%= link_to 'Edit', edit_etsy_path(etsy) %></td>
-    <td><%= link_to 'Destroy', etsy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+      <div class="pagination">
+        <%= will_paginate @etsies, :renderer => BootstrapPagination::Rails %>
+      </div>
+    </div>
+    <div class="col-md-4">
 
-<br />
+      <div class="crawl-info-form cif-box">
+        <div class="cif-inner">
+          <h2 id="crawledItemCount"><%= number_with_delimiter(@count) %></h2>
+          <p>Crawled Items</p>
+        </div>
+        <button id="export_Button" type="button" class="btn btn-success cif-button" data-loading-text="Exporting...">
+          Export to Excel
+        </button>
+      </div>
+    </div>
 
-<%= link_to 'New Etsy', new_etsy_path %>
+  </div>
+
+  <div class="row" id="cases-table">
+
+    <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Currencyvalue</th>
+        <th>Reviews</th>
+        <th>Favorites</th>
+        <th>Description</th>
+        <th>Images</th>
+      </tr>
+      </thead>
+
+      <% @etsies.each do |etsy| %>
+          <tr>
+            <td><%= etsy.title %></td>
+            <td><%= etsy.currencyValue %></td>
+            <td><%= etsy.reviews %></td>
+            <td><%= etsy.favorites %></td>
+            <td><%= etsy.description %></td>
+            <td><%= etsy.images %></td>
+          </tr>
+      <% end %>
+    </table>
+
+  </div>
+
+  <div class="pagination">
+    <%= will_paginate @etsies, :renderer => BootstrapPagination::Rails %>
+  </div>
+
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+  (function () {
+
+    $(document).ready(function () {
+      setInterval(fetchCrawledCount, 1000);
+    });
+
+  }).call(this);
+</script>
