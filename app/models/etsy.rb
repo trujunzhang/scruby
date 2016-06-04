@@ -1,5 +1,6 @@
 class Etsy
   include Mongoid::Document
+  field :url, type: String
   field :title, type: String
   field :currencyValue, type: String
   field :reviews, type: String

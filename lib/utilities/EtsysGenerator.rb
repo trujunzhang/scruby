@@ -7,12 +7,12 @@ class AliexpresssGenerator < BaseGenerator
     wb.styles do |s|
       head = s.add_style :bg_color => "FF", :fg_color => "00"
       percent = s.add_style :num_fmt => 9
-      wb.add_worksheet(:name => "Realtor's products") do |sheet|
+      wb.add_worksheet(:name => "ZendiazSilverwork") do |sheet|
         # Note: you must add rows to the document *BEFORE* applying column styles to them
-        sheet.add_row ['thumbnail', 'title', 'seller', 'price', 'original_price', 'shipping', 'ship_from', 'delivery_time', 'rate_num','total_orders']
+        sheet.add_row ['images', 'title', 'currencyValue', 'reviews', 'favorites', 'description']
 
         for item in row
-          sheet.add_row [item.thumbnail, item.title, item.seller, item.price, item.original_price, item.shipping, item.ship_from, item.delivery_time,item.rate_num,item.total_orders]
+          sheet.add_row [item.images, item.title, item.currencyValue, item.reviews, item.favorites, item.description]
         end
 
         #apply the percent style to the column at index 2 skipping the first row.
