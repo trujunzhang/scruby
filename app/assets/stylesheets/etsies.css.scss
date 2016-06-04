@@ -5,9 +5,9 @@
 #catListings {
 
   .item {
-    border-bottom: 4px solid #E5E5E5;
     margin-bottom: 30px;
     padding-bottom: 30px;
+    padding-top: 30px;
 
     .imgWrap {
       float: left;
@@ -16,6 +16,12 @@
       position: relative;
       border: 1px solid #DDDDDD;
     }
+  }
+
+  .price{
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 5px;
   }
 
 }

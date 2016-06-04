@@ -31,36 +31,42 @@
           <tr>
             <td>
               <div class="item clearfix">
-                <div class="imgWrap">
-                  <a href="/theme/air-real-estate-business-company-BDC3A9B"><img src="<%= etsy.images[0] %>"></a>
-                </div>
-                <div class="details">
-                  <div class="title">
-                    <a class="themeURL" href="<%= etsy.url %>"><%= etsy.title %></a>
-                    <div class="author">
-                      <a href="https://www.etsy.com/shop/ZendiazSilverwork?ref=l2-shopheader-name">ZendiazSilverwork</a>
-                    </div>
+                <div class="col-md-4">
+                  <div class="imgWrap">
+                    <img src="<%= etsy.images[0] %>">
                   </div>
-
-                  <table>
-                    <tbody>
-                    <tr>
-                      <td class="slabel">reviews:</td>
-                      <td><%= etsy.reviews %></td>
-                    </tr>
-                    <tr>
-                      <td class="slabel">favorites:</td>
-                      <td><%= etsy.favorites %></td>
-                    </tr>
-                    <tr>
-                      <td class="slabel">description:</td>
-                      <td><%= etsy.description %></td>
-                    </tr>
-                    </tbody>
-                  </table>
                 </div>
-                <div class="ps">
-                  <div class="price">$ <%= etsy.currencyValue %></div>
+                <div class="col-md-6">
+                  <div class="details">
+                    <div class="title">
+                      <a class="themeURL" href="<%= etsy.url %>" style="color: black;font-size: 26px;font-weight: 300;line-height: 1.2;font-family: 'Roboto';"><%= etsy.title %></a>
+                      <div class="author">
+                        <a href="https://www.etsy.com/shop/ZendiazSilverwork?ref=l2-shopheader-name" style="color: #008ed6;font-size: 13px;">ZendiazSilverwork</a>
+                      </div>
+                    </div>
+
+                    <table>
+                      <tbody>
+                      <tr>
+                        <td class="slabel">reviews:</td>
+                        <td><%= etsy.reviews %></td>
+                      </tr>
+                      <tr>
+                        <td class="slabel">favorites:</td>
+                        <td><%= etsy.favorites %></td>
+                      </tr>
+                      <tr>
+                        <td class="slabel">description:</td>
+                        <td><%= etsy.description %></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="ps">
+                    <div class="price">$ <%= etsy.currencyValue %></div>
+                  </div>
                 </div>
               </div>
             </td>
