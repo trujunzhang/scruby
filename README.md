@@ -16,6 +16,8 @@ rails generate scaffold dealsdirectnavbar sub1 sub2 sub3
     
 rails generate scaffold dealsdirect sub1 sub2 sub3 url guid brand title new_price label_price rrp_text thumbnail
 
+rails generate scaffold etsy title currencyValue reviews favorites description images      
+
 rails generate scaffold aliexpress title thumbnail seller price original_price shipping ship_from delivery_time rate_num total_orders                                     
 
 rails generate scaffold crawler title crawler_name domain 
