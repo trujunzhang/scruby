@@ -13,6 +13,7 @@
       float: left;
       margin-right: 20px;
       width: 320px;
+      height: 320px;
       position: relative;
       border: 1px solid #DDDDDD;
     }
@@ -28,6 +29,13 @@
     margin-top: 20px;
   }
 
+  .details{
+    padding-top: 32px;
+  }
+
+  .ps{
+    padding-top: 32px;
+  }
 }
 
 #catListings .item .imgWrap img {
