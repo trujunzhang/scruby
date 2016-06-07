@@ -1,6 +1,9 @@
 Scruby::Application.routes.draw do
 
 
+  resources :harajs
+
+
   resources :etsies
   resources :aliexpresses
   resources :realtors
