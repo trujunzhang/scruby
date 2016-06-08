@@ -21,7 +21,7 @@
     #scontent {
       min-width: 200px;
       max-width: 380px;
-      width: 260px;
+      width: 220px;
     }
 
     .phoneNumber {
@@ -35,8 +35,8 @@
       .sellerPhone {
         width: 220px;
         text-align: center;
-        border-right: solid 1px #5e8226;
-        padding: 10px 0;
+        border-left: solid 1px #5e8226;
+        padding: 10px 20px;
         cursor: pointer;
       }
     }
