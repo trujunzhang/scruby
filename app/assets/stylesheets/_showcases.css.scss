@@ -1,24 +1,56 @@
-#showcases{
+#showcases {
   background-color: white;
 
-  .table-description{
-    a{
+  .table-description {
+    a {
       width: 100px;
       height: 400px;
     }
   }
 
-  .cases-export-panel{
+  .cases-export-panel {
     padding-top: 20px;
     padding-bottom: 50px;
   }
 
+  #cases-table {
+    .slabel {
+      min-width: 140px;
+    }
 
-  #cases-table{
+    #scontent {
+      min-width: 200px;
+      max-width: 380px;
+      width: 260px;
+    }
 
+    .phoneNumber {
+      margin: 15px auto 0;
+      background-color: #87b821;
+      color: #fff;
+      overflow: hidden;
+      border-bottom: solid 5px #759b26;
+      border-radius: 2px;
+
+      .sellerPhone {
+        width: 220px;
+        text-align: center;
+        border-right: solid 1px #5e8226;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+    }
+
+    .phoneNumber > span:first-child {
+      padding: 19px 3px 18px 10px;
+      border-left: solid 1px #b0d27d;
+      padding-right: 6px;
+      font-size: 24px;
+      margin-left: 0
+    }
   }
 
-  .cif-box{
+  .cif-box {
     background: white;
     margin: 0 auto;
     position: relative;
@@ -28,20 +60,20 @@
     border: solid 1px #f15a24;
     border-radius: 4px;
 
-    .cif-inner{
+    .cif-inner {
       max-width: 380px;
       margin: 0 auto;
-      h2{
+      h2 {
         margin-top: 0;
         font-weight: 300;
         color: #4d4d4d;
         font-size: 74px;
       }
-      p{
+      p {
         margin-bottom: 32px;
       }
     }
-    .cif-button{
+    .cif-button {
       background-color: #f15a24;
       left: 50%;
       position: absolute;
@@ -52,7 +84,7 @@
     }
   }
 
-  #small-thumbnail{
+  #small-thumbnail {
     width: 200px;
     height: auto;
   }
