@@ -98,6 +98,8 @@ class ApplicationController < ActionController::Base
       Aliexpress.all
     elsif type == "etsys"
       Etsy.all
+    elsif type == "harajs"
+      Haraj.all
     end
   end
 
@@ -115,6 +117,8 @@ class ApplicationController < ActionController::Base
       Aliexpress.count
     elsif type == "etsys"
       Etsy.count
+    elsif type == "harajs"
+      Haraj.count
     end
   end
 
@@ -131,7 +135,9 @@ class ApplicationController < ActionController::Base
     elsif type == "aliexpresss"
       AliexpresssGenerator.new("aliexpress")
     elsif type == "etsys"
-      etsysGenerator.new("etsys")
+      EtsysGenerator.new("etsys")
+    elsif type == "harajs"
+      HarajsGenerator.new("harajs")
     end
   end
 

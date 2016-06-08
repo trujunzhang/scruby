@@ -1,6 +1,6 @@
 require 'BaseGenerator'
 
-class AliexpresssGenerator < BaseGenerator
+class EtsysGenerator < BaseGenerator
 
 
   def generate_excel(wb, row)
