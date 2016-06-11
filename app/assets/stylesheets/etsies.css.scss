@@ -19,21 +19,17 @@
     }
   }
 
-  .price{
+  .price {
     font-size: 32px;
     line-height: 1;
     margin-bottom: 5px;
   }
 
-  .information-table{
-    margin-top: 20px;
-  }
-
-  .details{
+  .details {
     padding-top: 32px;
   }
 
-  .ps{
+  .ps {
     padding-top: 32px;
   }
 }
@@ -49,4 +45,8 @@
 .carousel-inner > .item > a > img {
   width: 70%;
   margin: auto;
+}
+
+table.information-table {
+  margin-top: 20px;
 }
