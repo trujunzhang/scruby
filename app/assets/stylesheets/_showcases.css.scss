@@ -95,3 +95,10 @@
   display: table-cell;
   vertical-align: middle;
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 200px;
+  height: 220px;
+  padding-top: 20px;
+  margin: auto;
+}
