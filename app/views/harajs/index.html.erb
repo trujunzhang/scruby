@@ -100,7 +100,17 @@
                 </div>
                 <div class="col-md-2">
                   <div class="ps">
-                    <div class="price"> <%= haraj.section %></div>
+                    <div class="price">
+                      <ul class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+                        <% haraj.section.each do |item| %>
+                            <li class="vTop">
+                              <span typeof="v:Breadcrumb">
+                                <a href="" rel="v:url" property="v:title"><%= item %></a>
+                              </span>
+                            </li>
+                        <% end %>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
