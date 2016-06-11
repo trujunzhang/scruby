@@ -25,7 +25,6 @@
 
   <div class="row" id="cases-table">
 
-
     <table class="table table-striped table-bordered" cellspacing="0" width="100%">
       <tbody>
       <% @harajs.each do |haraj| %>
@@ -54,9 +53,13 @@
                 <div class="col-md-6">
                   <div class="details">
                     <div class="title">
-                      <a class="themeURL" href="<%= haraj.url %>" style="color: black;font-size: 26px;font-weight: 300;line-height: 1.2;font-family: 'Roboto';"><%= haraj.title %></a>
+                      <a class="themeURL" href="<%= haraj.url %>" style="color: black;font-size: 26px;font-weight: 300;line-height: 1.2;font-family: 'Roboto';">
+                        <%= haraj.title %>
+                      </a>
                       <div class="author">
-                        <a href="https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=" style="color: #008ed6;font-size: 13px;">opensooq</a>
+                        <a href="https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=" style="color: #008ed6;font-size: 13px;">
+                          <%= haraj.url_from %>
+                        </a>
                       </div>
                     </div>
 
