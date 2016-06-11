@@ -13,12 +13,19 @@ class HarajsController < ApplicationController
     @harajs = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
     @count = _all.count
 
+    @from_homepage = {
+        'opensooq' => 'https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=&page=1',
+        'mstaml' => 'http://www.mstaml.com/market/?t=0&l=0&d=0&x=&u=&o=3',
+        'harajsa' => 'https://haraj.com.sa'
+    }
+
     respond_to do |format|
       format.html # index.html.erb
       format.json {
         render :json => {
             :jobs => @harajs,
-            :count => @count
+            :count => @count,
+            :from_homepage => @from_homepage
         }
       }
     end
