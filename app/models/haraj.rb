@@ -19,6 +19,6 @@ class Haraj
   field :address, type: String
   field :memberName, type: String
   field :description, type: String
-  field :section, type: String
+  field :section, type: Array
 
 end
