@@ -20,11 +20,15 @@ module Scruby
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
-      
+
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
-      
-      
+
+      # http://stackoverflow.com/questions/32008513/rails-4-use-mysql-and-mongodb-together
+      # add these line to your application.rb file:
+      # This will force rails g to use active record.
+      g.orm :active_record
+
       g.view_specs false
       g.helper_specs false
     end
@@ -44,7 +48,6 @@ module Scruby
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-
 
 
     # Only load the plugins named here, in the order given (default is alphabetical).
