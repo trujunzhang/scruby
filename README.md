@@ -20,6 +20,8 @@ rails generate scaffold etsy title currencyValue reviews favorites description i
       
 rails generate scaffold harajs title url
 
+rails generate scaffold harajs_cache url guid created_at ID url_from
+
 rails generate scaffold aliexpress title thumbnail seller price original_price shipping ship_from delivery_time rate_num total_orders                                     
 
 rails generate scaffold crawler title crawler_name domain 
