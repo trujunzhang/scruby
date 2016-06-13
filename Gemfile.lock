@@ -144,6 +144,7 @@ GEM
     moped (1.5.1)
     multi_json (1.7.9)
     multi_test (0.0.2)
+    mysql2 (0.3.18)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.1.1)
@@ -264,6 +265,7 @@ DEPENDENCIES
   lodash-rails
   mongoid
   mongoid-rspec
+  mysql2 (= 0.3.18)
   owlcarousel-rails
   puma
   quiet_assets
@@ -275,5 +277,8 @@ DEPENDENCIES
   unicorn
   will_paginate-bootstrap
 
+RUBY VERSION
+   ruby 2.0.0p648
+
 BUNDLED WITH
-   1.11.2
+   1.12.4

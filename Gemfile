@@ -7,6 +7,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'mysql2', '0.3.18'
+
 gem 'lodash-rails'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'animate.css-rails', '~> 3.2.0'
