@@ -1,0 +1,2 @@
+module HarajsHistoriesHelper
+end

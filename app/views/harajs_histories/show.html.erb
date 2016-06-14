@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @harajs_history.url %>
+</p>
+
+<p>
+  <b>Guid:</b>
+  <%= @harajs_history.guid %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @harajs_history.created_at %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @harajs_history.ID %>
+</p>
+
+
+<%= link_to 'Edit', edit_harajs_history_path(@harajs_history) %> |
+<%= link_to 'Back', harajs_histories_path %>

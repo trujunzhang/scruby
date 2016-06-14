@@ -1,6 +1,9 @@
 Scruby::Application.routes.draw do
 
 
+  resources :harajs_histories
+
+
   resources :harajs_caches
 
 

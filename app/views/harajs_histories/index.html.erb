@@ -1,0 +1,29 @@
+<h1>Listing harajs_histories</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Guid</th>
+    <th>Created at</th>
+    <th>Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @harajs_histories.each do |harajs_history| %>
+  <tr>
+    <td><%= harajs_history.url %></td>
+    <td><%= harajs_history.guid %></td>
+    <td><%= harajs_history.created_at %></td>
+    <td><%= harajs_history.ID %></td>
+    <td><%= link_to 'Show', harajs_history %></td>
+    <td><%= link_to 'Edit', edit_harajs_history_path(harajs_history) %></td>
+    <td><%= link_to 'Destroy', harajs_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Harajs history', new_harajs_history_path %>
