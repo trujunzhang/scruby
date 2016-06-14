@@ -18,8 +18,7 @@ rails generate scaffold dealsdirect sub1 sub2 sub3 url guid brand title new_pric
 
 rails generate scaffold etsy title currencyValue reviews favorites description images
       
-rails generate scaffold harajs title url
-
+rails generate scaffold harajs ID city time title pictures subject contact number url_from address memberName description section           
 rails generate scaffold harajs_cache url guid created_at ID url_from
 rails generate scaffold harajs_history url guid created_at ID
 
@@ -42,3 +41,25 @@ whenever --update-crontab
 * rake secret
 * Once these are added, run bundle --binstubs and then cap install STAGES=production to generate your capistrano configuration.
 * cap production deploy
+
+
+ url = scrapy.Field()
+    guid = scrapy.Field()
+    created_at = scrapy.Field()
+    updated_at = scrapy.Field()
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    

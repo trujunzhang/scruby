@@ -36,7 +36,7 @@
                   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 280px;">
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox" id="<%= haraj.guid %>">
-                      <% haraj.pictures.each do |image| %>
+                      <% haraj.pictures.split(',').each do |image| %>
                           <div class="item">
                             <img src="<%= image %>" class="imgWrap">
                           </div>
@@ -109,7 +109,7 @@
                   <div class="ps">
                     <div class="price">
                       <ul class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-                        <% haraj.section.each do |item| %>
+                        <% haraj.section.split(',').each do |item| %>
                             <li class="vTop">
                               <span typeof="v:Breadcrumb">
                                 <a href="" rel="v:url" property="v:title"><%= item %></a>

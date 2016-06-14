@@ -10,8 +10,9 @@ class HarajsController < ApplicationController
   def index
 
     _all = Haraj.all
-    @harajs = _all.order_by(:updated_at => 'desc').paginate(page: params[:page], per_page: 50)
     @count = _all.count
+    # _all=_all.order("updated_at DESC")
+    @harajs = _all.paginate(page: params[:page], per_page: 50)
 
     @from_homepage = {
         'opensooq' => 'https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=&page=1',
