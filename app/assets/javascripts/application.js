@@ -194,16 +194,20 @@ var export_to_excel = function ($btn) {
 };
 
 var fetchCrawledCount = function () {
-    var ctrl = $("#showcases").attr("data-ctrl");
+    var type = $("#showcases").attr("data-ctrl");
+    var selector = $("#crawledItemCount")
+};
+
+var fetchTableRowCount = function (type, selector) {
     $.ajax({
         type: "GET",
         url: "/application/crawled_count",
         data: {
-            "type": $("#showcases").attr("data-ctrl")
+            "type": type
         }
     }).done(function (json) {
         var newValue = NumberHelpers.number_with_delimiter(json.count, {delimiter: ','});
-        $("#crawledItemCount").html(newValue);
+        selector.html(newValue);
     });
 };
 
