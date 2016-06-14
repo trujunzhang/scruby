@@ -1,14 +1,8 @@
 Scruby::Application.routes.draw do
 
-
-  resources :harajs_histories
-
-
-  resources :harajs_caches
-
-
   resources :harajs
-
+  resources :harajs_caches
+  resources :harajs_histories
 
   resources :etsies
   resources :aliexpresses
