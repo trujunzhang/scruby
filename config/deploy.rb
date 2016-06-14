@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:trujunzhang/scruby.git'
 # Default branch is :'blocs.6.1'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :branch, 'carousel.2'
+set :branch, 'mysql.haraj.3'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/deploy_test'
