@@ -119,6 +119,10 @@ class ApplicationController < ActionController::Base
       Etsy.count
     elsif type == "harajs"
       Haraj.count
+    elsif type == "harajcache"
+      HarajsCache.count
+    elsif type == "harajhistory"
+      HarajsHistory.count
     end
   end
 

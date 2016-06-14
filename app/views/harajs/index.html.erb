@@ -155,6 +155,18 @@
   (function () {
 
     $(document).ready(function () {
+      var fetchHarajCacheCount = function () {
+        var type = 'harajcache';
+        var selector = $("#crawledCacheCount");
+        fetchTableRowCount(type, selector)
+      };
+      var fetchHarajHistoryCount = function () {
+        var type = 'harajhistory';
+        var selector = $("#crawledHistroyCount");
+        fetchTableRowCount(type, selector)
+      };
+      setInterval(fetchCrawledCount, 1000);
+      setInterval(fetchCrawledCount, 1000);
       setInterval(fetchCrawledCount, 1000);
     });
 

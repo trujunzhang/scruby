@@ -13,8 +13,8 @@ class HarajsController < ApplicationController
     @count = _all.count
     @harajs = _all.paginate(page: params[:page], per_page: 50)
 
-    @cacheCount = HarajsCache.all.count
-    @historyCount = HarajsHistory.all.count
+    @cacheCount = HarajsCache.count
+    @historyCount = HarajsHistory.count
 
     @from_homepage = {
         'opensooq' => 'https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=&page=1',
