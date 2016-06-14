@@ -1,0 +1,37 @@
+<%= form_for(@harajs_cach) do |f| %>
+  <% if @harajs_cach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@harajs_cach.errors.count, "error") %> prohibited this harajs_cach from being saved:</h2>
+
+      <ul>
+      <% @harajs_cach.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br />
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.text_field :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :ID %><br />
+    <%= f.text_field :ID %>
+  </div>
+  <div class="field">
+    <%= f.label :url_from %><br />
+    <%= f.text_field :url_from %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

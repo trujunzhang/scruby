@@ -1,0 +1,31 @@
+<h1>Listing harajs_caches</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Guid</th>
+    <th>Created at</th>
+    <th>Id</th>
+    <th>Url from</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @harajs_caches.each do |harajs_cach| %>
+  <tr>
+    <td><%= harajs_cach.url %></td>
+    <td><%= harajs_cach.guid %></td>
+    <td><%= harajs_cach.created_at %></td>
+    <td><%= harajs_cach.ID %></td>
+    <td><%= harajs_cach.url_from %></td>
+    <td><%= link_to 'Show', harajs_cach %></td>
+    <td><%= link_to 'Edit', edit_harajs_cach_path(harajs_cach) %></td>
+    <td><%= link_to 'Destroy', harajs_cach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Harajs cache', new_harajs_cach_path %>
