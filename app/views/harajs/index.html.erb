@@ -13,6 +13,21 @@
       <div class="crawl-info-form cif-box">
         <div class="cif-inner">
           <h2 id="crawledItemCount"><%= number_with_delimiter(@count) %></h2>
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <div class="row">
+                <span id="crawledCacheCount"><%= number_with_delimiter(@cacheCount) %></span>
+              </div>
+              <h6>cache</h6>
+            </div>
+            <div class="col-md-6 text-center">
+              <div class="row">
+                <span id="crawledHistroyCount"><%= number_with_delimiter(@historyCount) %></span>
+              </div>
+              <h6>history</h6>
+            </div>
+          </div>
+
           <p>Crawled Items</p>
         </div>
         <button id="export_Button" type="button" class="btn btn-success cif-button" data-loading-text="Exporting...">

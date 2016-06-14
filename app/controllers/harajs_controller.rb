@@ -11,8 +11,10 @@ class HarajsController < ApplicationController
 
     _all = Haraj.all
     @count = _all.count
-    # _all=_all.order("updated_at DESC")
     @harajs = _all.paginate(page: params[:page], per_page: 50)
+
+    @cacheCount = HarajsCache.all.count
+    @historyCount = HarajsHistory.all.count
 
     @from_homepage = {
         'opensooq' => 'https://sa.opensooq.com/ar/find?term=&cat_id=&scid=&city=&allposts_cb=true&allposts=no&price_from=&price_to=&page=1',
@@ -26,6 +28,8 @@ class HarajsController < ApplicationController
         render :json => {
             :jobs => @harajs,
             :count => @count,
+            :cacheCount => @cacheCount,
+            :historyCount => @historyCount,
             :from_homepage => @from_homepage
         }
       }
