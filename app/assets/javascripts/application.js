@@ -195,7 +195,8 @@ var export_to_excel = function ($btn) {
 
 var fetchCrawledCount = function () {
     var type = $("#showcases").attr("data-ctrl");
-    var selector = $("#crawledItemCount")
+    var selector = $("#crawledItemCount");
+    fetchTableRowCount(type, selector)
 };
 
 var fetchTableRowCount = function (type, selector) {
