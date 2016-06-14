@@ -1,7 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
+require "rails"
+
 # Pick the frameworks you want:
-# require "active_record/railtie"
+require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
@@ -23,11 +25,6 @@ module Scruby
 
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
-
-      # http://stackoverflow.com/questions/32008513/rails-4-use-mysql-and-mongodb-together
-      # add these line to your application.rb file:
-      # This will force rails g to use active record.
-      g.orm :active_record
 
       g.view_specs false
       g.helper_specs false
@@ -99,6 +96,17 @@ module Scruby
       YAML.load(File.open(env_file)).each do |key, value|
         ENV[key.to_s] = value
       end if File.exists?(env_file)
+    end
+
+    # http://stackoverflow.com/questions/32008513/rails-4-use-mysql-and-mongodb-together
+    # add these line to your application.rb file:
+    # This will force rails g to use active record.
+    # https://github.com/MangoGamesPteLtd/RailsMysqlMongo
+    config.generators do |g|
+      g.orm :mongoid
+    end
+    config.generators do |gen|
+      gen.orm :active_record
     end
   end
 end

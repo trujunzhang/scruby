@@ -26,7 +26,9 @@ gem 'axlsx'
 gem 'jquery-rails'
 gem 'devise'
 gem 'figaro'
+
 gem 'mongoid'
+gem "bson_ext"
 
 gem 'tinymce-rails'
 
